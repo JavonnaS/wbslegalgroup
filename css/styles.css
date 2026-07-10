@@ -804,3 +804,104 @@ h1, h2, h3, h4 {
     max-width: 190px;
   }
 }
+/* ===== Practice Areas Page (final) ===== */
+.practice-page {
+  background: #ffffff;
+  padding: 90px 25px;
+}
+
+.practice-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.practice-page h1 {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 600;
+  color: #050505;
+  margin-bottom: 25px;
+}
+
+.practice-intro {
+  max-width: 750px;
+  margin: 0 auto 80px;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.9;
+  color: #444;
+}
+
+.practice-area {
+  padding: 55px 0;
+  border-bottom: 1px solid #d8c39a;
+}
+
+.practice-area:last-child {
+  border-bottom: none;
+}
+
+.practice-area h2 {
+  font-family: var(--font-serif);
+  font-size: 42px;
+  font-weight: 600;
+  color: #050505;
+  margin-bottom: 15px;
+}
+
+.gold-line {
+  width: 70px;
+  height: 3px;
+  background: #c79b4b;
+  margin-bottom: 25px;
+}
+
+.practice-area p {
+  font-family: var(--font-sans);
+  color: #333;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 850px;
+}
+
+.practice-area h3 {
+  margin-top: 35px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #c79b4b;
+}
+
+.practice-area ul {
+  columns: 2;
+  padding-left: 20px;
+  font-family: var(--font-sans);
+  color: #333;
+  line-height: 2;
+}
+
+.practice-area li {
+  margin-bottom: 5px;
+}
+
+/* Logo safety override (keeps giant logo bug from returning) */
+.nav-logo img {
+  height: 64px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .practice-page h1 { font-size: 44px; }
+  .practice-area h2 { font-size: 34px; }
+  .practice-area ul { columns: 1; }
+
+  .nav-logo img {
+    height: 50px;
+    max-width: 190px;
+  }
+}
