@@ -794,3 +794,86 @@ h1, h2, h3, h4 {
   width: auto;
   display:block;
 }
+/* ===== FINAL: Homepage Practice Preview (scoped, safe) ===== */
+.home-practice-section {
+  background: #050505;
+  padding: 80px 25px;
+}
+
+.home-practice-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.home-practice-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.home-practice-intro {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  font-family: "Open Sans", sans-serif;
+  color: #dddddd;
+  line-height: 1.8;
+}
+
+.home-practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+
+.home-practice-item {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #c79b4b;
+  background: transparent;
+}
+
+.home-practice-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.home-practice-item p {
+  font-family: "Open Sans", sans-serif;
+  color: #cccccc;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* scoped button so it only affects homepage preview */
+.home-practice-section .practice-button {
+  display: inline-block;
+  margin-top: 45px;
+  padding: 14px 35px;
+  border: 1px solid #c79b4b;
+  color: #c79b4b;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  transition: .3s ease;
+  border-radius: 0;
+}
+
+.home-practice-section .practice-button:hover {
+  background: #c79b4b;
+  color: #050505;
+}
+
+@media (max-width: 900px) {
+  .home-practice-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+/* Safety reset: keep global practice buttons untouched elsewhere */
+.practice-section .practice-button {
+  border-radius: 999px;
+}
