@@ -790,20 +790,7 @@ h1, h2, h3, h4 {
 .home-practice-section .practice-button {
   border-radius: 999px;
 }
-/* Logo safety override */
-.nav-logo img {
-  height: 64px;
-  width: auto;
-  max-width: 190px;
-  object-fit: contain;
-}
 
-@media (max-width: 767px) {
-  .nav-logo img {
-    height: 50px;
-    max-width: 190px;
-  }
-}
 /* ===== Practice Areas Page (final) ===== */
 .practice-page {
   background: #ffffff;
@@ -903,5 +890,144 @@ h1, h2, h3, h4 {
   .nav-logo img {
     height: 50px;
     max-width: 190px;
+  }
+}
+/* ===== EXACT MOBILE MATCH TUNING ===== */
+@media (max-width: 767px) {
+  /* keep CTA above Safari bottom bar */
+  .floating-cta {
+    bottom: 84px;
+    right: 12px;
+    padding: .72rem 1.05rem;
+    font-size: .9rem;
+    z-index: 1300;
+  }
+
+  /* Header / logo / hamburger */
+  .site-header {
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .navbar {
+    min-height: 74px;
+    padding-inline: .9rem;
+  }
+
+  .nav-logo img {
+    height: 42px;
+    max-width: 170px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .nav-toggle {
+    padding: .35rem;
+  }
+
+  .hamburger-bar {
+    width: 26px;
+    height: 3px;
+  }
+
+  /* Hero tighter so values start sooner */
+  .hero__grid--tight {
+    padding-block: .9rem .7rem;
+    gap: .7rem;
+  }
+
+  .hero__image--compact {
+    max-height: 28vh;
+    border-radius: 2px;
+  }
+
+  .hero__heading {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    margin-bottom: .45rem;
+  }
+
+  .hero__sub {
+    font-size: .92rem;
+    margin-bottom: .7rem;
+  }
+
+  /* Values section like screenshot cards */
+  .values-strip.section--compact {
+    padding-block: 1rem 1.1rem;
+    background: #000;
+  }
+
+  .values__grid--tight {
+    gap: .8rem;
+    margin-top: .2rem;
+  }
+
+  .values__grid--tight .value__card {
+    padding: 1rem .95rem;
+    border: 1px solid #1c1c1c;
+    background: #060606;
+  }
+
+  .values__grid--tight .value__card h3 {
+    font-size: 2.05rem;
+    line-height: 1.05;
+    margin-bottom: .42rem;
+    color: #f3f3f3;
+  }
+
+  .values__grid--tight .value__card p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #bfbfbf;
+  }
+
+  /* Practice section spacing/scale */
+  .home-practice-section {
+    background: #000;
+    padding: 2rem 1rem 1.8rem;
+  }
+
+  .home-practice-container {
+    max-width: 100%;
+  }
+
+  .home-practice-section h2 {
+    font-size: clamp(2.7rem, 16vw, 4.2rem);
+    line-height: 1;
+    margin-bottom: .9rem;
+  }
+
+  .home-practice-intro {
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d8d8d8;
+  }
+
+  .home-practice-grid {
+    grid-template-columns: 1fr;
+    gap: .8rem;
+  }
+
+  .home-practice-item {
+    padding: .9rem .8rem;
+    border-top: 1px solid #2b2b2b;
+  }
+
+  .home-practice-item h3 {
+    font-size: 1.35rem;
+    margin-bottom: .38rem;
+  }
+
+  .home-practice-item p {
+    font-size: .97rem;
+    line-height: 1.55;
+  }
+
+  .home-practice-section .practice-button {
+    margin-top: .9rem;
+    padding: .72rem 1.1rem;
+    border-radius: 999px;
   }
 }
