@@ -707,87 +707,6 @@ h1, h2, h3, h4 {
   .attorney-card h4 { font-size: 14px; letter-spacing: 3px; }
 }
 
-/* ===== Homepage Practice Areas Preview ===== */
-.home-practice-section {
-  background: #050505;
-  padding: 64px 18px;
-}
-
-.home-practice-container {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-.home-practice-section h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 7vw, 3rem);
-  color: #ffffff;
-  margin-bottom: 14px;
-}
-
-.home-practice-intro {
-  max-width: 750px;
-  margin: 0 auto 36px;
-  font-family: "Open Sans", sans-serif;
-  color: #dddddd;
-  line-height: 1.7;
-  font-size: 0.98rem;
-}
-
-.home-practice-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.home-practice-item {
-  text-align: center;
-  padding: 16px 10px 6px;
-  border-top: 1px solid #c79b4b;
-}
-
-.home-practice-item h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  color: #ffffff;
-  margin-bottom: 10px;
-  line-height: 1.2;
-}
-
-.home-practice-item p {
-  font-family: "Open Sans", sans-serif;
-  color: #cccccc;
-  line-height: 1.7;
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-.practice-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 24px;
-  border: 1px solid #c79b4b;
-  color: #c79b4b;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 0.5px;
-  transition: .3s ease;
-  border-radius: 999px;
-}
-
-.practice-button:hover {
-  background: #c79b4b;
-  color: #050505;
-}
-
-@media (max-width: 900px) {
-  .home-practice-section { padding: 48px 14px; }
-  .home-practice-grid { grid-template-columns: 1fr; gap: 14px; }
-  .home-practice-intro { margin-bottom: 22px; font-size: 0.94rem; }
-  .home-practice-item { padding: 12px 6px 2px; }
-  .practice-button { margin-top: 22px; padding: 11px 20px; }
-}
 /* ===== Revert Practice Preview to original look ===== */
 .home-practice-section {
   background: #050505;
@@ -863,83 +782,15 @@ h1, h2, h3, h4 {
 @media (max-width: 900px) {
   .home-practice-grid { grid-template-columns: 1fr; gap: 20px; }
 }
-.firm-name { color: #fff; }
-/* ===== Header fix for WBS text logo ===== */
 .navbar{
-  min-height: 84px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wbs-logo{
+  min-height: 72px;
   display:flex;
   align-items:center;
-  gap:10px;
-  text-decoration:none;
-  max-width: calc(100% - 72px); /* leaves room for hamburger */
+  justify-content:space-between;
 }
 
-.wbs-monogram{
-  position:relative;
-  width:44px;
-  height:46px;
-  flex-shrink:0;
-}
-
-.wbs-monogram .letter{
-  position:absolute;
-  font-family:"Cormorant Garamond", serif;
-  font-weight:600;
-  font-size:32px;
-  line-height:1;
-  color:#C79B4B;
-}
-
-.w{ left:0; top:0; z-index:1; }
-.b{ left:14px; top:8px; z-index:2; }
-.s{ left:24px; top:20px; z-index:1; }
-
-.wbs-text{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  min-width:0;
-}
-
-.firm-name{
-  font-family:"Cormorant Garamond", serif;
-  font-size:20px;
-  font-weight:500;
-  letter-spacing:.2px;
-  color:#fff;
-  line-height:1.05;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.firm-subtitle{
-  margin-top:2px;
-  font-family:"Montserrat", sans-serif;
-  font-size:10px;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
-  color:#C79B4B;
-  white-space:nowrap;
-}
-
-@media (max-width:768px){
-  .navbar{ min-height:72px; }
-
-  .wbs-logo{ gap:8px; max-width: calc(100% - 64px); }
-
-  .wbs-monogram{ width:36px; height:38px; }
-  .wbs-monogram .letter{ font-size:26px; }
-  .w{ left:0; top:0; }
-  .b{ left:11px; top:6px; }
-  .s{ left:19px; top:16px; }
-
-  .firm-name{ font-size:15px; }
-  .firm-subtitle{ font-size:9px; letter-spacing:1.4px; }
+.nav-logo img{
+  height: 48px;
+  width: auto;
+  display:block;
 }
