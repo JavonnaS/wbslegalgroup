@@ -790,3 +790,17 @@ h1, h2, h3, h4 {
 .practice-section .practice-button {
   border-radius: 999px;
 }
+/* Logo safety override */
+.nav-logo img {
+  height: 64px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .nav-logo img {
+    height: 50px;
+    max-width: 190px;
+  }
+}
