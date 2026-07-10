@@ -41,32 +41,6 @@
     });
   }
 
-  /* ---------- Active Nav Link on Scroll ---------- */
-  (function () {
-    var sections = document.querySelectorAll('section[id]');
-    var links    = document.querySelectorAll('.nav-link');
-
-    if (!sections.length || !links.length) return;
-
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var id = entry.target.id;
-          links.forEach(function (link) {
-            var href = link.getAttribute('href');
-            if (href === '#' + id) {
-              link.classList.add('nav-link--active');
-            } else {
-              link.classList.remove('nav-link--active');
-            }
-          });
-        }
-      });
-    }, { threshold: 0.35, rootMargin: '-80px 0px 0px 0px' });
-
-    sections.forEach(function (section) { observer.observe(section); });
-  }());
-
   /* ---------- Contact Form Validation ---------- */
   var form = document.getElementById('contactForm');
 
@@ -80,12 +54,12 @@
         var error = document.getElementById(errorId);
         var value = field ? field.value.trim() : '';
         if (!value) {
-          if (field)  field.classList.add('is-invalid');
-          if (error)  error.textContent = msg;
+          if (field) field.classList.add('is-invalid');
+          if (error) error.textContent = msg;
           valid = false;
         } else {
-          if (field)  field.classList.remove('is-invalid');
-          if (error)  error.textContent = '';
+          if (field) field.classList.remove('is-invalid');
+          if (error) error.textContent = '';
         }
       }
 
@@ -93,18 +67,18 @@
         var field = document.getElementById(id);
         var error = document.getElementById(errorId);
         var value = field ? field.value.trim() : '';
-        var ok    = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
         if (!ok) {
-          if (field)  field.classList.add('is-invalid');
-          if (error)  error.textContent = value ? 'Please enter a valid email address.' : 'Email address is required.';
+          if (field) field.classList.add('is-invalid');
+          if (error) error.textContent = value ? 'Please enter a valid email address.' : 'Email address is required.';
           valid = false;
         } else {
-          if (field)  field.classList.remove('is-invalid');
-          if (error)  error.textContent = '';
+          if (field) field.classList.remove('is-invalid');
+          if (error) error.textContent = '';
         }
       }
 
-      validate('name',    'nameError',    'Full name is required.');
+      validate('name', 'nameError', 'Full name is required.');
       validateEmail('email', 'emailError');
       validate('subject', 'subjectError', 'Please select a practice area.');
       validate('message', 'messageError', 'Please describe your legal matter.');
@@ -130,10 +104,10 @@
     });
   }
 
-  /* ---------- Footer Year ---------- */
+  /* ---------- Static Footer Year (if span exists) ---------- */
   var yearEl = document.getElementById('footerYear');
   if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+    yearEl.textContent = '2026';
   }
 
 }());
