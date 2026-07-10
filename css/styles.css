@@ -864,3 +864,82 @@ h1, h2, h3, h4 {
   .home-practice-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 .firm-name { color: #fff; }
+/* ===== Header fix for WBS text logo ===== */
+.navbar{
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wbs-logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  max-width: calc(100% - 72px); /* leaves room for hamburger */
+}
+
+.wbs-monogram{
+  position:relative;
+  width:44px;
+  height:46px;
+  flex-shrink:0;
+}
+
+.wbs-monogram .letter{
+  position:absolute;
+  font-family:"Cormorant Garamond", serif;
+  font-weight:600;
+  font-size:32px;
+  line-height:1;
+  color:#C79B4B;
+}
+
+.w{ left:0; top:0; z-index:1; }
+.b{ left:14px; top:8px; z-index:2; }
+.s{ left:24px; top:20px; z-index:1; }
+
+.wbs-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-width:0;
+}
+
+.firm-name{
+  font-family:"Cormorant Garamond", serif;
+  font-size:20px;
+  font-weight:500;
+  letter-spacing:.2px;
+  color:#fff;
+  line-height:1.05;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.firm-subtitle{
+  margin-top:2px;
+  font-family:"Montserrat", sans-serif;
+  font-size:10px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:#C79B4B;
+  white-space:nowrap;
+}
+
+@media (max-width:768px){
+  .navbar{ min-height:72px; }
+
+  .wbs-logo{ gap:8px; max-width: calc(100% - 64px); }
+
+  .wbs-monogram{ width:36px; height:38px; }
+  .wbs-monogram .letter{ font-size:26px; }
+  .w{ left:0; top:0; }
+  .b{ left:11px; top:6px; }
+  .s{ left:19px; top:16px; }
+
+  .firm-name{ font-size:15px; }
+  .firm-subtitle{ font-size:9px; letter-spacing:1.4px; }
+}
