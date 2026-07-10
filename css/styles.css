@@ -754,3 +754,84 @@ h1, h2, h3, h4 {
   .practice-section--tight .service-list{ gap:6px; margin-top:10px; }
   .practice-section--tight .service-list span{ font-size:.72rem; padding:5px 9px; }
 }
+/* ===== Homepage Practice Areas Preview ===== */
+.home-practice-section {
+  background: #050505;
+  padding: 64px 18px;
+}
+
+.home-practice-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.home-practice-section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 7vw, 3rem);
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.home-practice-intro {
+  max-width: 750px;
+  margin: 0 auto 36px;
+  font-family: "Open Sans", sans-serif;
+  color: #dddddd;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.home-practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.home-practice-item {
+  text-align: center;
+  padding: 16px 10px 6px;
+  border-top: 1px solid #c79b4b;
+}
+
+.home-practice-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.home-practice-item p {
+  font-family: "Open Sans", sans-serif;
+  color: #cccccc;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.practice-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  border: 1px solid #c79b4b;
+  color: #c79b4b;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5px;
+  transition: .3s ease;
+  border-radius: 999px;
+}
+
+.practice-button:hover {
+  background: #c79b4b;
+  color: #050505;
+}
+
+@media (max-width: 900px) {
+  .home-practice-section { padding: 48px 14px; }
+  .home-practice-grid { grid-template-columns: 1fr; gap: 14px; }
+  .home-practice-intro { margin-bottom: 22px; font-size: 0.94rem; }
+  .home-practice-item { padding: 12px 6px 2px; }
+  .practice-button { margin-top: 22px; padding: 11px 20px; }
+}
