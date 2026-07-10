@@ -433,3 +433,131 @@ h1, h2, h3, h4 {
   outline: 3px solid var(--color-gold);
   outline-offset: 2px;
 }
+/* ===== V2 COMPACT OVERRIDES ===== */
+:root {
+  --nav-height: 78px;
+}
+
+.section--compact { padding-block: 2.4rem; }
+
+.hero--compact {
+  min-height: auto;
+  padding-top: var(--nav-height);
+}
+
+.hero__grid--tight {
+  min-height: auto;
+  padding-block: 1.6rem 1.2rem;
+  gap: 1rem;
+}
+
+.hero__image--compact {
+  max-height: 52vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.values__grid--tight { gap: .7rem; }
+.values__grid--tight .value__card { padding: .8rem; }
+
+.practice__grid--condensed .practice__card {
+  padding: .85rem .7rem;
+}
+
+.section__intro .section__desc {
+  margin-bottom: 1.1rem;
+}
+
+.contact__info .btn {
+  margin-top: .35rem;
+}
+
+.site-footer {
+  padding-top: 1.4rem;
+}
+
+.footer__grid--simple {
+  gap: .9rem;
+  padding-bottom: 1rem;
+}
+
+.footer__nav ul { gap: .25rem; }
+.footer__bottom { padding-top: .55rem; font-size: .8rem; }
+
+@media (max-width: 767px) {
+  .navbar { min-height: var(--nav-height); }
+
+  .nav-logo--image img {
+    height: 50px;
+    max-width: 190px;
+    object-fit: contain;
+  }
+
+  .nav-menu {
+    top: var(--nav-height);
+    padding: .7rem 1rem .85rem;
+    gap: .15rem;
+  }
+
+  .nav-link {
+    padding: .48rem .6rem;
+    font-size: .88rem;
+  }
+
+  .hero__heading {
+    font-size: clamp(1.75rem, 8.1vw, 2.4rem);
+    margin-bottom: .65rem;
+  }
+
+  .hero__sub {
+    font-size: .95rem;
+    line-height: 1.5;
+    margin-bottom: .9rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero__image--compact { max-height: 36vh; }
+
+  .section__heading {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+    margin-bottom: .45rem;
+  }
+
+  .value__card h3, .practice__card h3 { font-size: 1rem; }
+
+  .contact__detail-row { font-size: .95rem; }
+
+  .footer__nav a { font-size: .9rem; }
+}
+/* ===== Floating Mobile CTA ===== */
+.floating-cta {
+  position: fixed;
+  right: 14px;
+  bottom: 16px;
+  z-index: 1200;
+  background: var(--color-gold);
+  color: #111;
+  font-weight: 700;
+  font-size: .9rem;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: .72rem 1rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,.28);
+  border: 1px solid rgba(0,0,0,.12);
+}
+
+.floating-cta:hover,
+.floating-cta:focus-visible {
+  background: var(--color-gold-light);
+  color: #111;
+  text-decoration: none;
+}
+
+@media (min-width: 980px) {
+  .floating-cta { display: none; }
+}
