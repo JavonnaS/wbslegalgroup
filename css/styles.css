@@ -706,3 +706,51 @@ h1, h2, h3, h4 {
   .attorney-card h3 { font-size: 34px; }
   .attorney-card h4 { font-size: 14px; letter-spacing: 3px; }
 }
+/* ===== Practice Areas Mobile-Tight ===== */
+.practice-section--tight { background:#050505; padding:56px 16px; }
+.practice-section--tight h2 {
+  text-align:center; color:#fff; font-family:"Cormorant Garamond", serif;
+  font-size:clamp(2rem,7vw,3rem); margin-bottom:10px;
+}
+.practice-section--tight .practice-intro{
+  max-width:720px; margin:0 auto 36px; text-align:center; color:#ddd;
+  font-family:"Open Sans",sans-serif; line-height:1.65; font-size:.98rem;
+}
+.practice-section--tight .practice-grid{
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; max-width:1150px; margin:auto;
+}
+.practice-section--tight .practice-card{
+  background:#fff; border-radius:18px; padding:22px 18px 18px; text-align:center;
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
+}
+.practice-section--tight .practice-icon{
+  width:62px; height:62px; border-radius:50%; background:#c79b4b; display:flex;
+  justify-content:center; align-items:center; margin:-48px auto 14px; border:6px solid #050505;
+}
+.practice-section--tight .practice-icon svg{ width:30px; height:30px; }
+.practice-section--tight .practice-card h3{
+  font-family:"Cormorant Garamond",serif; font-size:1.55rem; color:#050505; margin:0 0 10px; line-height:1.2;
+}
+.practice-section--tight .practice-card p{
+  font-family:"Open Sans",sans-serif; color:#444; line-height:1.55; font-size:.95rem; margin:0;
+}
+.practice-section--tight .service-list{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:14px;
+}
+.practice-section--tight .service-list span{
+  background:#f5f1ea; color:#050505; padding:6px 10px; border-radius:999px;
+  font-family:"Open Sans",sans-serif; font-size:.76rem; line-height:1.2;
+}
+
+@media (max-width: 900px){
+  .practice-section--tight{ padding:46px 14px; }
+  .practice-section--tight .practice-grid{ grid-template-columns:1fr; gap:16px; }
+  .practice-section--tight .practice-intro{ margin-bottom:24px; font-size:.94rem; }
+  .practice-section--tight .practice-card{ padding:18px 14px 14px; border-radius:14px; }
+  .practice-section--tight .practice-icon{ width:54px; height:54px; margin:-38px auto 10px; border-width:5px; }
+  .practice-section--tight .practice-icon svg{ width:25px; height:25px; }
+  .practice-section--tight .practice-card h3{ font-size:1.3rem; margin-bottom:8px; }
+  .practice-section--tight .practice-card p{ font-size:.9rem; line-height:1.5; }
+  .practice-section--tight .service-list{ gap:6px; margin-top:10px; }
+  .practice-section--tight .service-list span{ font-size:.72rem; padding:5px 9px; }
+}
