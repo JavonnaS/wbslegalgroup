@@ -787,7 +787,7 @@ h1, h2, h3, h4 {
   }
 }
 /* Safety reset: keep global practice buttons untouched elsewhere */
-.practice-section .practice-button {
+.home-practice-section .practice-button {
   border-radius: 999px;
 }
 /* Logo safety override */
