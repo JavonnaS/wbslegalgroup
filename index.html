@@ -1,22 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="WBS Legal Group – Experienced attorneys fighting for your rights. Serving clients with integrity, dedication, and results." />
-  <title>WBS Legal Group | Attorneys at Law</title>
+  <meta name="description" content="Williams-Bryant & Smith Legal Group provides client-centered legal services with a holistic approach and real results." />
+  <title>WBS Legal Group | Home</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
   <header class="site-header">
     <nav class="navbar" aria-label="Main navigation">
-      <a href="#home" class="nav-logo" aria-label="WBS Legal Group home">
-        <span class="logo-wbs">WBS</span><span class="logo-legal"> Legal Group</span>
+      <a href="index.html" class="nav-logo nav-logo--image" aria-label="WBS Legal Group home">
+        <img src="IMG_8970.jpeg" alt="WBS Legal Group logo" />
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
@@ -26,11 +27,12 @@
       </button>
 
       <ul class="nav-menu" id="navMenu" role="list">
-        <li><a href="#home"      class="nav-link">Home</a></li>
-        <li><a href="#about"     class="nav-link">About</a></li>
-        <li><a href="#practice"  class="nav-link">Practice Areas</a></li>
-        <li><a href="#team"      class="nav-link">Our Team</a></li>
-        <li><a href="#contact"   class="nav-link nav-link--cta">Contact Us</a></li>
+        <li><a href="index.html" class="nav-link nav-link--active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="practice-areas.html" class="nav-link">Practice Areas</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="consultation.html" class="nav-link nav-link--cta">Schedule a Consultation</a></li>
       </ul>
     </nav>
   </header>
@@ -38,185 +40,95 @@
   <main>
 
     <!-- ===== HERO ===== -->
-    <section class="hero" id="home" aria-label="Hero">
+    <section class="hero hero--split" id="home" aria-label="Hero">
       <div class="hero__overlay"></div>
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Trusted Legal Counsel</p>
-        <h1 class="hero__heading">Justice Starts Here.</h1>
-        <p class="hero__sub">WBS Legal Group is committed to delivering powerful, personalized legal representation so you can face every challenge with confidence.</p>
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn--primary">Free Consultation</a>
-          <a href="#practice" class="btn btn--outline">Our Practice Areas</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="section about" id="about">
-      <div class="container about__grid">
-        <div class="about__image-wrap">
-          <div class="about__image-placeholder" aria-hidden="true">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="200" height="200" fill="#1a2e4a"/>
-              <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="serif" font-size="56" fill="#c9a84c">⚖</text>
-            </svg>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__heading">
+            Legal Guidance.<br />
+            Holistic Solutions.<br />
+            <span>Real Results.</span>
+          </h1>
+          <p class="hero__sub">
+            Williams-Bryant &amp; Smith Legal Group provides client-centered legal services with a holistic
+            approach to help you move forward with confidence and peace of mind.
+          </p>
+          <div class="hero__actions">
+            <a href="consultation.html" class="btn btn--primary">Schedule a Consultation</a>
           </div>
         </div>
-        <div class="about__text">
-          <p class="section__eyebrow">Who We Are</p>
-          <h2 class="section__heading">A Legacy of Excellence in Law</h2>
-          <p>WBS Legal Group was founded on the belief that every client deserves unwavering advocacy and honest counsel. With decades of combined experience across multiple practice areas, our attorneys bring both legal expertise and genuine compassion to every case.</p>
-          <p>We take the time to understand your unique situation, explain your options clearly, and fight relentlessly for the outcome you deserve.</p>
-          <ul class="about__stats" aria-label="Firm highlights">
-            <li><strong>20+</strong><span>Years of Experience</span></li>
-            <li><strong>1,500+</strong><span>Cases Won</span></li>
-            <li><strong>98%</strong><span>Client Satisfaction</span></li>
-          </ul>
+        <div class="hero__image-wrap">
+          <img src="IMG_9594.jpeg" alt="WBS Legal Group attorneys" class="hero__image" />
         </div>
       </div>
     </section>
 
-    <!-- ===== PRACTICE AREAS ===== -->
+    <!-- ===== VALUES ===== -->
+    <section class="section values-strip">
+      <div class="container">
+        <h2 class="section__heading section__heading--gold center">More Than Law. We Offer a Partnership.</h2>
+        <ul class="values__grid values__grid--four" role="list">
+          <li class="value__card">
+            <h3>Client Centered</h3>
+            <p>We listen, we care, and we advocate for what matters most to you.</p>
+          </li>
+          <li class="value__card">
+            <h3>Holistic Approach</h3>
+            <p>We address the full picture—your legal needs and your goals for the future.</p>
+          </li>
+          <li class="value__card">
+            <h3>Results Driven</h3>
+            <p>Practical solutions. Strategic advice. Peace of mind.</p>
+          </li>
+          <li class="value__card">
+            <h3>Community Focused</h3>
+            <p>We are committed to serving and uplifting the communities we represent.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PRACTICE AREAS (CONDENSED) ===== -->
     <section class="section practice bg-light" id="practice">
       <div class="container">
         <div class="section__intro">
-          <p class="section__eyebrow">What We Do</p>
-          <h2 class="section__heading">Our Practice Areas</h2>
-          <p class="section__desc">We provide comprehensive legal services across a wide range of disciplines, ensuring you have expert guidance no matter your legal challenge.</p>
+          <h2 class="section__heading">Practice Areas</h2>
+          <p class="section__desc">Focused legal services with practical solutions.</p>
         </div>
 
-        <ul class="practice__grid" role="list">
-          <li class="practice__card">
-            <div class="practice__icon" aria-hidden="true">🏛️</div>
-            <h3>Civil Litigation</h3>
-            <p>Skilled courtroom advocates fighting to protect your interests in disputes involving contracts, property, and more.</p>
-          </li>
-          <li class="practice__card">
-            <div class="practice__icon" aria-hidden="true">🏢</div>
-            <h3>Business Law</h3>
-            <p>From formation and contracts to mergers and disputes, we safeguard your business at every stage of growth.</p>
-          </li>
-          <li class="practice__card">
-            <div class="practice__icon" aria-hidden="true">🏠</div>
-            <h3>Real Estate</h3>
-            <p>Expert guidance for residential and commercial transactions, title issues, zoning, and landlord-tenant matters.</p>
-          </li>
-          <li class="practice__card">
-            <div class="practice__icon" aria-hidden="true">👨‍👩‍👧</div>
-            <h3>Family Law</h3>
-            <p>Compassionate representation in divorce, custody, adoption, and domestic matters with your family's future in mind.</p>
-          </li>
-          <li class="practice__card">
-            <div class="practice__icon" aria-hidden="true">📜</div>
-            <h3>Estate Planning</h3>
-            <p>Wills, trusts, and probate services designed to protect your legacy and provide peace of mind for loved ones.</p>
-          </li>
-          <li class="practice__card">
-            <div class="practice__icon" aria-hidden="true">⚖️</div>
-            <h3>Criminal Defense</h3>
-            <p>Aggressive defense strategies to protect your rights, freedom, and future from the moment of arrest onward.</p>
-          </li>
+        <ul class="practice__grid practice__grid--condensed" role="list">
+          <li class="practice__card"><h3>Family Law</h3></li>
+          <li class="practice__card"><h3>Contract &amp; Document Services</h3></li>
+          <li class="practice__card"><h3>Compliance Services</h3></li>
+          <li class="practice__card"><h3>Personal Injury</h3></li>
+          <li class="practice__card"><h3>General Counsel Services</h3></li>
         </ul>
+
+        <div class="section__actions">
+          <a href="practice-areas.html" class="btn btn--outline-dark">View All Practice Areas</a>
+        </div>
       </div>
     </section>
 
-    <!-- ===== TEAM ===== -->
-    <section class="section team" id="team">
-      <div class="container">
-        <div class="section__intro">
-          <p class="section__eyebrow">Meet the Attorneys</p>
-          <h2 class="section__heading">Our Team</h2>
-          <p class="section__desc">Our attorneys bring a breadth of knowledge and a depth of dedication to every client relationship.</p>
-        </div>
-
-        <ul class="team__grid" role="list">
-          <li class="team__card">
-            <div class="team__avatar" aria-hidden="true">W</div>
-            <h3 class="team__name">William B. Stewart</h3>
-            <p class="team__title">Founding Partner</p>
-            <p class="team__bio">25 years of trial experience in civil litigation and business law. Harvard Law, magna cum laude.</p>
-          </li>
-          <li class="team__card">
-            <div class="team__avatar" aria-hidden="true">B</div>
-            <h3 class="team__name">Brianna S. Walsh</h3>
-            <p class="team__title">Partner – Family Law</p>
-            <p class="team__bio">Dedicated family law practitioner with a reputation for thoughtful, results-driven advocacy.</p>
-          </li>
-          <li class="team__card">
-            <div class="team__avatar" aria-hidden="true">S</div>
-            <h3 class="team__name">Samuel L. Barnes</h3>
-            <p class="team__title">Associate – Criminal Defense</p>
-            <p class="team__bio">Former public defender bringing firsthand courtroom experience to every criminal defense matter.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
+    <!-- ===== CONTACT STRIP ===== -->
     <section class="section contact bg-dark" id="contact">
-      <div class="container contact__grid">
+      <div class="container contact__grid contact__grid--simple">
         <div class="contact__info">
-          <p class="section__eyebrow section__eyebrow--light">Get in Touch</p>
-          <h2 class="section__heading section__heading--light">Schedule Your Free Consultation</h2>
-          <p class="contact__info-text">Our attorneys are ready to listen and help. Reach out today and take the first step toward resolving your legal matter.</p>
+          <h2 class="section__heading section__heading--light">Let’s Talk</h2>
+          <p class="contact__info-text">We’re here to help. Schedule a consultation to discuss your legal needs and how we can help.</p>
 
           <address class="contact__details" aria-label="Office contact details">
             <div class="contact__detail-row">
-              <span class="contact__detail-icon" aria-hidden="true">📍</span>
-              <span>123 Justice Ave, Suite 400<br />Atlanta, GA 30303</span>
-            </div>
-            <div class="contact__detail-row">
-              <span class="contact__detail-icon" aria-hidden="true">📞</span>
-              <a href="tel:+14045550100">(404) 555-0100</a>
-            </div>
-            <div class="contact__detail-row">
               <span class="contact__detail-icon" aria-hidden="true">✉️</span>
-              <a href="mailto:info@wbslegalgroup.com">info@wbslegalgroup.com</a>
+              <a href="mailto:intake@wbslegalgroup.com">intake@wbslegalgroup.com</a>
             </div>
             <div class="contact__detail-row">
-              <span class="contact__detail-icon" aria-hidden="true">🕐</span>
-              <span>Mon – Fri: 9 AM – 6 PM</span>
+              <span class="contact__detail-icon" aria-hidden="true">📍</span>
+              <span>6075 The Corners Pkwy, #210, Peachtree Corners, GA 30092</span>
             </div>
           </address>
+          <a href="consultation.html" class="btn btn--primary">Schedule a Consultation</a>
         </div>
-
-        <form class="contact__form" id="contactForm" novalidate aria-label="Contact form">
-          <div class="form-group">
-            <label for="name">Full Name <span aria-hidden="true">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Jane Doe" required autocomplete="name" />
-            <span class="form-error" id="nameError" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
-            <span class="form-error" id="emailError" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject <span aria-hidden="true">*</span></label>
-            <select id="subject" name="subject" required>
-              <option value="">Select a practice area…</option>
-              <option value="civil">Civil Litigation</option>
-              <option value="business">Business Law</option>
-              <option value="realestate">Real Estate</option>
-              <option value="family">Family Law</option>
-              <option value="estate">Estate Planning</option>
-              <option value="criminal">Criminal Defense</option>
-              <option value="other">Other</option>
-            </select>
-            <span class="form-error" id="subjectError" role="alert"></span>
-          </div>
-          <div class="form-group">
-            <label for="message">Message <span aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="Briefly describe your legal matter…" required></textarea>
-            <span class="form-error" id="messageError" role="alert"></span>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-          <p class="form-success" id="formSuccess" hidden>Thank you! We'll be in touch within one business day.</p>
-        </form>
       </div>
     </section>
 
@@ -224,33 +136,21 @@
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <p class="footer__logo"><span class="logo-wbs">WBS</span> Legal Group</p>
-        <p class="footer__tagline">Justice Starts Here.</p>
-        <p class="footer__disclaimer">The information on this website is for general informational purposes only and does not constitute legal advice.</p>
-      </div>
+    <div class="container footer__grid footer__grid--simple">
       <nav class="footer__nav" aria-label="Footer navigation">
         <h4>Quick Links</h4>
         <ul role="list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#practice">Practice Areas</a></li>
-          <li><a href="#team">Our Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="consultation.html">Schedule a Consultation</a></li>
         </ul>
       </nav>
-      <div class="footer__contact">
-        <h4>Contact</h4>
-        <address>
-          <p>123 Justice Ave, Suite 400<br />Atlanta, GA 30303</p>
-          <p><a href="tel:+14045550100">(404) 555-0100</a></p>
-          <p><a href="mailto:info@wbslegalgroup.com">info@wbslegalgroup.com</a></p>
-        </address>
+      <div class="footer__bottom footer__bottom--simple">
+        <p>&copy; 2026 Williams-Bryant &amp; Smith Legal Group, LLC. All rights reserved.</p>
       </div>
-    </div>
-    <div class="footer__bottom">
-      <p>&copy; <span id="footerYear"></span> WBS Legal Group. All rights reserved.</p>
     </div>
   </footer>
 
