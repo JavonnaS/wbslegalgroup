@@ -863,3 +863,4 @@ h1, h2, h3, h4 {
 @media (max-width: 900px) {
   .home-practice-grid { grid-template-columns: 1fr; gap: 20px; }
 }
+.firm-name { color: #fff; }
