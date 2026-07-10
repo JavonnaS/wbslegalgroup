@@ -641,3 +641,68 @@ h1, h2, h3, h4 {
 .attorney-bio p:last-child {
   margin-bottom: 0;
 }
+/* ===== Attorney card consistency patch ===== */
+.attorney-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+.attorney-card {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.attorney-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.attorney-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.attorney-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0 0 8px;
+  color: #050505;
+  text-align: center;
+}
+
+.attorney-card h4 {
+  color: #c79b4b;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 16px;
+  margin: 0 0 26px;
+  text-align: center;
+}
+
+.attorney-bio p {
+  line-height: 1.8;
+  font-size: 15px;
+  color: #333;
+  text-align: left;
+  margin: 0 0 22px;
+}
+
+.attorney-bio p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .attorney-grid { grid-template-columns: 1fr; gap: 28px; }
+  .attorney-photo img { width: 190px; height: 190px; }
+  .attorney-card h3 { font-size: 34px; }
+  .attorney-card h4 { font-size: 14px; letter-spacing: 3px; }
+}
