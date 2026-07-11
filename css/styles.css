@@ -1452,3 +1452,22 @@ main .section.bg-dark .contact__info h2 {
 main .section.bg-dark .contact__details {
     margin-top: 5px !important;
 }
+/* ==========================================
+   Attorney Photos - Desktop Clarity Fix
+   Does not affect mobile layout
+========================================== */
+
+@media (min-width: 901px) {
+
+  .attorney-photo img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    image-rendering: auto;
+  }
+
+  .attorney-photo {
+    overflow: hidden;
+  }
+
+}
