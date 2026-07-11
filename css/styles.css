@@ -1275,34 +1275,34 @@ color:#050505;
 .nav-logo-image {
   display: flex;
   align-items: center;
-  height: 106px;
+  height: 116px;
 }
 
 .nav-logo img,
 .nav-logo--image img,
 .nav-logo-image img {
-  height: 88px !important;
+  height: 98px !important;
   width: auto !important;
-  max-width: 390px !important;
+  max-width: 400px !important;
   object-fit: contain;
-  transform: scale(1.06); /* subtle size boost without obvious stretch */
+  transform: scale(1.16); /* subtle size boost without obvious stretch */
   transform-origin: center left;
 }
 
 /* Mobile: shorter height, slightly longer width */
-@media (max-width: 767px) {
+@media (max-width: 770px) {
   .nav-logo,
   .nav-logo--image,
   .nav-logo-image {
-    height: 64px;
+    height: 70px;
   }
 
   .nav-logo img,
   .nav-logo--image img,
   .nav-logo-image img {
-    height: 50px !important;     /* shorter */
-    max-width: 235px !important; /* a little longer */
-    transform: scaleX(1.08) scaleY(0.98);
+    height: 60px !important;     /* shorter */
+    max-width: 250px !important; /* a little longer */
+    transform: scaleX(1.18) scaleY(1.08);
   }
 }
 /* ==========================================
