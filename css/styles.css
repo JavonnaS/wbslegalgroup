@@ -1300,65 +1300,7 @@ main .bg-dark {
 }
 
 
-}/* ==========================================
-   FINAL CONTACT PAGE VISIBILITY FIX
-========================================== */
-
-main .bg-dark .contact__details {
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-    opacity:1 !important;
-}
-
-
-main .bg-dark .contact__detail-row {
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    color:#ffffff !important;
-    opacity:1 !important;
-    font-family:var(--font-sans);
-    font-size:1.05rem;
-    line-height:1.7;
-}
-
-
-main .bg-dark .contact__detail-row span {
-    color:#ffffff !important;
-    opacity:1 !important;
-}
-
-
-main .bg-dark .contact__detail-row a {
-    color:#c79b4b !important;
-    opacity:1 !important;
-    text-decoration:none;
-}
-
-
-main .bg-dark .contact__detail-row a:hover {
-    color:#e0c068 !important;
-}
-
-
-main .bg-dark .contact__detail-icon {
-    color:#c79b4b !important;
-    opacity:1 !important;
-}
-
-
-@media(max-width:767px){
-
-    main .bg-dark .contact__detail-row {
-        text-align:center;
-        justify-content:center;
-        align-items:center;
-    }
-
-}
-
-
+   
 /* Improve spacing so details read clearly */
 
 .contact__details {
@@ -1381,33 +1323,77 @@ main .bg-dark .contact__detail-icon {
     }
 
 }
-/* FINAL CONTACT DETAILS VISIBILITY FIX */
+/* ==========================================
+   WBS CONTACT PAGE FINAL FIX
+   (Only formatting/colors - no content changes)
+========================================== */
 
-.contact__detail-row {
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.contact__detail-row span {
-    color: #c79b4b !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.contact__detail-row a {
-    color: #c79b4b !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
 
 .contact__details {
-    color: #c79b4b !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
-.contact-visible span {
+
+
+.contact__detail-row {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#ffffff !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+
+.contact__detail-row span {
+    color:#c79b4b !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+
+.contact__detail-row a {
+    color:#c79b4b !important;
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+
+.contact__detail-row a:hover {
+    color:#e0c068 !important;
+}
+
+
+.contact__detail-icon {
     color:#c79b4b !important;
 }
-.contact__detail-row {
-  color: rgba(255,255,255,.9);
+
+
+/* Contact page dark section spacing */
+
+main .bg-dark {
+    padding-top:70px;
+    padding-bottom:70px;
+}
+
+
+main .bg-dark .contact__info {
+    max-width:800px;
+}
+
+
+main .bg-dark .section__heading--light {
+    color:#ffffff !important;
+}
+
+
+@media(max-width:767px){
+
+    .contact__detail-row {
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+    }
+
 }
