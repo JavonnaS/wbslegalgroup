@@ -1378,3 +1378,15 @@ color:#050505;
   max-width:300px !important;
   object-fit:contain !important;
 }
+/* header logo only */
+.logo img{
+  width:320px;
+  height:auto;
+  display:block;
+}
+
+@media (max-width:768px){
+  .logo img{
+    width:230px;
+  }
+}
