@@ -111,13 +111,6 @@ h4 {
 }
 
 
-.nav-logo img {
-  height:60px;
-  width:auto;
-  object-fit:contain;
-}
-
-
 .nav-toggle {
   background:none;
   border:none;
@@ -1443,4 +1436,9 @@ main .section.bg-dark .contact__info h2 {
     color: #e0c27a !important;
     -webkit-text-fill-color: #e0c27a !important;
   }
+}
+.nav-logo img {
+  height:60px;
+  width:auto;
+  object-fit:contain;
 }
