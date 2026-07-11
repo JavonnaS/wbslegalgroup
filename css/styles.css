@@ -1,10 +1,3 @@
-I’m sending it now. I’ll keep this clean and avoid adding more explanations between parts.
-
-Because the stylesheet is large, I’m going to send it in **3 consecutive parts**. Copy all 3 parts into the same `styles.css` file.
-
-**Part 1/3 — New `styles.css`**
-
-```css
 /* ==========================================================
    WBS Legal Group - Luxury Boutique Law Firm Stylesheet
    Clean responsive redesign
@@ -1140,4 +1133,16 @@ font-size:2.8rem;
 }
 
 
+}
+.practice-symbol {
+  width:65px;
+  height:65px;
+  margin-bottom:20px;
+  border-radius:50%;
+  border:1px solid var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:var(--gold);
 }
