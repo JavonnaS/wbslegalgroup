@@ -1437,8 +1437,35 @@ main .section.bg-dark .contact__info h2 {
     -webkit-text-fill-color: #e0c27a !important;
   }
 }
-.nav-logo img {
-  height:60px;
-  width:auto;
-  object-fit:contain;
+
+/* ===== FINAL DESKTOP CONTACT GOLD ===== */
+@media (min-width: 768px) {
+  main .section.bg-dark .contact__detail-row,
+  main .section.bg-dark .contact__detail-row * ,
+  main .section.bg-dark .contact__details,
+  main .section.bg-dark .contact__details * ,
+  main .section.bg-dark .contact-info,
+  main .section.bg-dark .contact-info * ,
+  main .section.bg-dark .office-hours,
+  main .section.bg-dark .office-hours * {
+    color: #c79b4b !important;
+    -webkit-text-fill-color: #c79b4b !important;
+    opacity: 1 !important;
+  }
+
+  main .section.bg-dark .contact__detail-row a,
+  main .section.bg-dark .contact__details a,
+  main .section.bg-dark .contact-info a,
+  main .section.bg-dark .office-hours a {
+    color: #c79b4b !important;
+    -webkit-text-fill-color: #c79b4b !important;
+  }
+
+  main .section.bg-dark .contact__detail-row a:hover,
+  main .section.bg-dark .contact__details a:hover,
+  main .section.bg-dark .contact-info a:hover,
+  main .section.bg-dark .office-hours a:hover {
+    color: #e0c27a !important;
+    -webkit-text-fill-color: #e0c27a !important;
+  }
 }
