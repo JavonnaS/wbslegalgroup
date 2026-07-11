@@ -1411,3 +1411,36 @@ main .section.bg-dark .contact__info h2 {
     transform: scaleX(1.08) scaleY(0.98);
   }
 }
+/* ==========================================
+   DESKTOP CONTACT TEXT GOLD FORCE FIX
+========================================== */
+@media (min-width: 768px) {
+  .contact__details,
+  .contact__details * ,
+  .contact__detail-row,
+  .contact__detail-row * ,
+  .contact-info,
+  .contact-info * ,
+  .office-hours,
+  .office-hours * {
+    color: #c79b4b !important;
+    -webkit-text-fill-color: #c79b4b !important;
+    opacity: 1 !important;
+  }
+
+  .contact__detail-row a,
+  .contact__details a,
+  .contact-info a,
+  .office-hours a {
+    color: #c79b4b !important;
+    -webkit-text-fill-color: #c79b4b !important;
+  }
+
+  .contact__detail-row a:hover,
+  .contact__details a:hover,
+  .contact-info a:hover,
+  .office-hours a:hover {
+    color: #e0c27a !important;
+    -webkit-text-fill-color: #e0c27a !important;
+  }
+}
