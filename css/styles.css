@@ -1472,42 +1472,42 @@ main .section.bg-dark .contact__details {
 
 }
 /* ==========================================
-   Header Logo Visibility Fix (larger)
+   Header Logo Sizing (mobile shorter/wider, desktop larger)
 ========================================== */
 
+/* base / desktop first */
 .nav-logo,
 .nav-logo--image,
 .nav-logo-image {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 112px; /* bigger desktop header slot */
 }
 
-/* desktop */
 .nav-logo img,
 .nav-logo--image img,
 .nav-logo-image img {
-  height: 96px !important;
+  height: 92px !important;     /* bigger desktop height */
   width: auto !important;
-  max-width: 360px !important;
+  max-width: 420px !important; /* bigger desktop width cap */
   object-fit: contain;
-  transform: scale(1.45);
+  transform: scaleX(1.14) scaleY(1.08); /* slightly wider than tall */
   transform-origin: center left;
 }
 
-/* mobile */
+/* mobile: reduce height, keep a wider look */
 @media (max-width: 767px) {
   .nav-logo,
   .nav-logo--image,
   .nav-logo-image {
-    height: 78px;
+    height: 66px;
   }
 
   .nav-logo img,
   .nav-logo--image img,
   .nav-logo-image img {
-    height: 72px !important;
-    max-width: 270px !important;
-    transform: scale(1.45);
+    height: 52px !important;    /* smaller mobile height */
+    max-width: 250px !important;/* a bit longer/wider */
+    transform: scaleX(1.18) scaleY(0.96);
   }
 }
