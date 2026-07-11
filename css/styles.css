@@ -1150,307 +1150,104 @@ color:#050505;
 
 }
 /* ==========================================
-   CONTACT PAGE ALIGNMENT / FORMAT UPDATE
-   Keeps existing content unchanged
+   CONTACT PAGE - CLEAN OVERRIDES (single source)
 ========================================== */
 
-
-/* Contact page title */
-
-main .bg-light {
-    padding-top: 55px;
-    padding-bottom: 45px;
+/* light title strip */
+main .section.bg-light {
+  padding-top: 38px !important;
+  padding-bottom: 10px !important;
 }
 
-
-main .bg-light .section__heading {
-    text-align:left;
-    max-width:1200px;
-    margin:0 auto;
-    padding-left:20px;
+main .section.bg-light .section__heading {
+  margin-bottom: 0 !important;
+  line-height: 1.05 !important;
+  text-align: left;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
 }
 
-
-
-
-/* Contact information section */
-
-main .bg-dark {
-    padding-top:70px;
-    padding-bottom:70px;
+/* dark contact content strip */
+main .section.bg-dark {
+  padding-top: 12px !important;
+  padding-bottom: 58px !important;
 }
 
-
-
-.contact__grid--simple {
-    max-width:1200px;
-    margin:auto;
+main .section.bg-dark .contact__info {
+  max-width: 800px;
 }
 
-
-
-.contact__info {
-    max-width:700px;
+main .section.bg-dark .contact__info h2 {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
 }
 
-
-
-.contact__info h2 {
-
-    font-size:clamp(2rem,4vw,3rem);
-    margin-bottom:30px;
-
-}
-
-
-
+/* contact rows */
 .contact__details {
-
-    gap:18px;
-    margin-top:25px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px !important;
 }
-
-
 
 .contact__detail-row {
-
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    color:#f5f5f5;
-
-    font-size:1.05rem;
-
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff !important;
+  line-height: 1.7;
 }
-
-
-
-.contact__detail-row span {
-
-    color:#ffffff;
-
-}
-
-
-
-.contact__detail-row a {
-
-    color:#c79b4b;
-
-}
-
-
-
-.contact__detail-row a:hover {
-
-    color:#e0c27a;
-
-}
-
-
-
-
-/* Better mobile spacing */
-
-@media(max-width:767px){
-
-
-main .bg-light {
-
-    padding-top:40px;
-    padding-bottom:30px;
-
-}
-
-
-main .bg-light .section__heading {
-
-    text-align:center;
-    padding-left:0;
-
-}
-
-
-
-main .bg-dark {
-
-    padding-top:45px;
-    padding-bottom:45px;
-
-}
-
-
-
-.contact__info {
-
-    text-align:center;
-
-}
-
-
-
-.contact__detail-row {
-
-    justify-content:center;
-    flex-direction:column;
-    gap:5px;
-
-}
-
-
-   
-/* Improve spacing so details read clearly */
-
-.contact__details {
-    margin-top: 25px;
-}
-
-
-.contact__detail-row {
-    line-height: 1.8;
-    font-size: 1.05rem;
-}
-
-
-/* Mobile readability */
-
-@media(max-width:767px){
-
-    .contact__detail-row {
-        color:#ffffff !important;
-    }
-
-}
-/* ==========================================
-   WBS CONTACT PAGE FINAL FIX
-   (Only formatting/colors - no content changes)
-========================================== */
-
-
-.contact__details {
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-}
-
-
-.contact__detail-row {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    color:#ffffff !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-
-.contact__detail-row span {
-    color:#c79b4b !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-
-.contact__detail-row a {
-    color:#c79b4b !important;
-    opacity:1 !important;
-    visibility:visible !important;
-}
-
-
-.contact__detail-row a:hover {
-    color:#e0c068 !important;
-}
-
 
 .contact__detail-icon {
-    color:#c79b4b !important;
+  color: #c79b4b !important;
+  flex-shrink: 0;
 }
 
-
-/* Contact page dark section spacing */
-
-main .bg-dark {
-    padding-top:70px;
-    padding-bottom:70px;
+.contact__detail-row span {
+  color: #f5f5f5;
 }
 
-
-main .bg-dark .contact__info {
-    max-width:800px;
+.contact__detail-row a {
+  color: #c79b4b !important;
 }
 
-
-main .bg-dark .section__heading--light {
-    color:#ffffff !important;
+.contact__detail-row a:hover {
+  color: #e0c27a !important;
 }
 
+/* mobile */
+@media (max-width: 767px) {
+  main .section.bg-light {
+    padding-top: 30px !important;
+    padding-bottom: 6px !important;
+  }
 
-@media(max-width:767px){
+  main .section.bg-light .section__heading {
+    text-align: center;
+    padding-inline: 0;
+  }
 
-    .contact__detail-row {
-        flex-direction:column;
-        justify-content:center;
-        text-align:center;
-    }
-
-}
-/* Tighten Contact Us spacing */
-
-main .section.bg-light {
-    padding-bottom: 10px !important;
-}
-
-
-main .section.bg-light .section__heading {
-    margin-bottom: 0 !important;
-}
-
-
-main .section.bg-dark {
-    padding-top: 5px !important;
-}
-
-
-main .section.bg-dark .contact__info h2 {
-    margin-top: 0 !important;
-    margin-bottom: 15px !important;
-}
-
-
-main .section.bg-dark .contact__details {
-    margin-top: 10px !important;
-}
-/* Tighter Contact Page Layout */
-
-main .section.bg-light {
-    padding-top: 35px !important;
-    padding-bottom: 5px !important;
-}
-
-
-main .section.bg-light .section__heading {
-    margin-bottom: 0 !important;
-    line-height: 1 !important;
-}
-
-
-main .section.bg-dark {
+  main .section.bg-dark {
     padding-top: 10px !important;
-    padding-bottom: 55px !important;
-}
+    padding-bottom: 46px !important;
+  }
 
+  main .section.bg-dark .contact__info {
+    text-align: center;
+  }
 
-main .section.bg-dark .contact__info h2 {
-    margin-top: 0 !important;
-    margin-bottom: 10px !important;
-}
+  .contact__details {
+    margin-top: 10px !important;
+    gap: 14px;
+  }
 
-
-main .section.bg-dark .contact__details {
-    margin-top: 5px !important;
+  .contact__detail-row {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+  }
 }
 /* ==========================================
    Attorney Photos - Desktop Clarity Fix
