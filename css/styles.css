@@ -1332,7 +1332,7 @@ main .bg-dark {
 .contact__details {
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:12px;
 }
 
 
