@@ -1301,3 +1301,53 @@ main .bg-dark {
 
 
 }
+/* ==========================================
+   Contact Page Text Visibility Fix
+   (No content changes)
+========================================== */
+
+.bg-dark .contact__details,
+.bg-dark .contact__detail-row,
+.bg-dark .contact__detail-row span {
+    color: #ffffff !important;
+}
+
+
+.bg-dark .contact__detail-row a {
+    color: #c79b4b !important;
+    font-weight: 600;
+}
+
+
+.bg-dark .contact__detail-row a:hover {
+    color: #e0c27a !important;
+}
+
+
+.bg-dark .contact__detail-icon {
+    color: #c79b4b !important;
+}
+
+
+/* Improve spacing so details read clearly */
+
+.contact__details {
+    margin-top: 25px;
+}
+
+
+.contact__detail-row {
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+
+/* Mobile readability */
+
+@media(max-width:767px){
+
+    .contact__detail-row {
+        color:#ffffff !important;
+    }
+
+}
