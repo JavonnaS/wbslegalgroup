@@ -199,15 +199,36 @@ h4 {
 
 
 .btn,
-.practice-button {
+
+.home-practice-section .practice-button {
 
 display:inline-block;
-padding:14px 34px;
+margin-top:45px;
+
+padding:14px 38px;
+
 border-radius:999px;
-font-family:var(--sans);
+
+background:#c79b4b;
+
+color:#050505;
+
+font-family:"Montserrat", sans-serif;
+
 font-weight:600;
-letter-spacing:.5px;
-transition:var(--transition);
+
+letter-spacing:1px;
+
+transition:.3s ease;
+
+}
+
+
+.home-practice-section .practice-button:hover {
+
+background:#e0c27a;
+
+color:#050505;
 
 }
 
@@ -720,77 +741,44 @@ grid-template-columns:repeat(2,1fr);
 }
 
 }
-/* ================= CONTACT SECTION ================= */
+/* ===== Homepage Contact Section Fix ===== */
 
-
-.contact,
 .contact-section {
-
-background:var(--black);
-padding:90px 25px;
-text-align:center;
-
+  background: #050505;
+  color: #ffffff;
+  padding: 90px 25px;
+  text-align: center;
 }
 
-
-
-.contact h2,
 .contact-section h2 {
-
-color:white;
-font-size:3rem;
-margin-bottom:20px;
-
+  color: #ffffff;
 }
 
-
-
-.contact p,
-.contact-info {
-
-color:#ddd;
-max-width:650px;
-margin:0 auto 30px;
-
+.contact-section p {
+  color: #e5e5e5;
+  line-height: 1.8;
 }
 
-
-
-.contact__details {
-
-display:flex;
-flex-direction:column;
-gap:15px;
-margin:30px auto;
-
+.contact-info a {
+  color: #c79b4b;
+  font-weight: 600;
 }
 
-
-
-.contact__detail-row {
-
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-color:#ddd;
-
+.contact-info a:hover {
+  color: #e0c27a;
 }
 
-
-
-.contact__detail-row a {
-
-color:var(--gold);
-
+.contact-info p {
+  color: #f0f0f0;
 }
 
+.contact-section .btn-primary {
+  background: #c79b4b;
+  color: #050505;
+}
 
-
-.contact .btn {
-
-margin-top:20px;
-
+.contact-section .btn-primary:hover {
+  background: #e0c27a;
 }
 
 
