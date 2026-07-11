@@ -1397,18 +1397,29 @@ main .bg-dark .section__heading--light {
     }
 
 }
-/* Reduce spacing between Contact Us heading and contact information */
+/* Tighten Contact Us spacing */
 
-main .bg-light {
-    padding-bottom: 20px;
+main .section.bg-light {
+    padding-bottom: 10px !important;
 }
 
 
-main .bg-light .section__heading {
-    margin-bottom: 0;
+main .section.bg-light .section__heading {
+    margin-bottom: 0 !important;
 }
 
 
-main .bg-dark {
-    padding-top: 35px;
+main .section.bg-dark {
+    padding-top: 15px !important;
+}
+
+
+main .section.bg-dark .contact__info h2 {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+
+main .section.bg-dark .contact__details {
+    margin-top: 10px !important;
 }
