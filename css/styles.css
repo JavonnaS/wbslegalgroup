@@ -1423,3 +1423,32 @@ main .section.bg-dark .contact__info h2 {
 main .section.bg-dark .contact__details {
     margin-top: 10px !important;
 }
+/* Tighter Contact Page Layout */
+
+main .section.bg-light {
+    padding-top: 35px !important;
+    padding-bottom: 5px !important;
+}
+
+
+main .section.bg-light .section__heading {
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+}
+
+
+main .section.bg-dark {
+    padding-top: 10px !important;
+    padding-bottom: 55px !important;
+}
+
+
+main .section.bg-dark .contact__info h2 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+
+main .section.bg-dark .contact__details {
+    margin-top: 5px !important;
+}
