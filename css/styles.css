@@ -943,7 +943,31 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+/* Javonna headshot clarity (desktop) */
+.attorney-headshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  image-rendering: auto;
+}
 
+@media (min-width: 901px) {
+  .attorney-photo {
+    width: 260px;
+    height: 260px;
+    margin-inline: auto;
+  }
+
+  .attorney-photo .attorney-headshot {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
 
 
 /* ================= FOOTER ================= */
