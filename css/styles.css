@@ -1405,3 +1405,6 @@ main .bg-dark .contact__detail-icon {
     visibility: visible !important;
     opacity: 1 !important;
 }
+.contact-visible span {
+    color:#c79b4b !important;
+}
