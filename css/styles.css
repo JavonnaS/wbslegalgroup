@@ -741,44 +741,123 @@ grid-template-columns:repeat(2,1fr);
 }
 
 }
-/* ===== Homepage Contact Section Fix ===== */
+/* ==========================================
+   CONTACT PAGE - FINAL CLEAN (single source)
+========================================== */
 
-.contact-section {
-  background: #050505;
-  color: #ffffff;
-  padding: 90px 25px;
-  text-align: center;
+/* section spacing */
+main .section.bg-light {
+  padding-top: 36px;
+  padding-bottom: 10px;
 }
 
-.contact-section h2 {
-  color: #ffffff;
+main .section.bg-light .section__heading {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-inline: 20px;
+  text-align: left;
+  line-height: 1.05;
 }
 
-.contact-section p {
-  color: #e5e5e5;
-  line-height: 1.8;
+main .section.bg-dark {
+  padding-top: 14px;
+  padding-bottom: 58px;
 }
 
-.contact-info a {
-  color: #c79b4b;
-  font-weight: 600;
+/* content width */
+main .section.bg-dark .contact__info {
+  max-width: 860px;
 }
 
-.contact-info a:hover {
-  color: #e0c27a;
+main .section.bg-dark .contact__info h2 {
+  margin: 0 0 14px 0;
 }
 
-.contact-info p {
-  color: #f0f0f0;
+/* details list */
+.contact__details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
 }
 
-.contact-section .btn-primary {
-  background: #c79b4b;
-  color: #050505;
+/* FORCE GOLD text for address + office hours + info lines */
+.contact__detail-row,
+.contact__detail-row span,
+.contact__details span,
+.contact__details p,
+.contact__details li,
+.contact-info p,
+.office-hours,
+.office-hours p,
+.office-hours li {
+  color: #c79b4b !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-.contact-section .btn-primary:hover {
-  background: #e0c27a;
+/* links in details */
+.contact__detail-row a,
+.contact__details a,
+.contact-info a,
+.office-hours a {
+  color: #c79b4b !important;
+  text-decoration: none;
+}
+
+.contact__detail-row a:hover,
+.contact__details a:hover,
+.contact-info a:hover,
+.office-hours a:hover {
+  color: #e0c27a !important;
+}
+
+/* icon color */
+.contact__detail-icon {
+  color: #c79b4b !important;
+  flex-shrink: 0;
+}
+
+/* row layout */
+.contact__detail-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.7;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+  main .section.bg-light {
+    padding-top: 30px;
+    padding-bottom: 6px;
+  }
+
+  main .section.bg-light .section__heading {
+    text-align: center;
+    padding-inline: 0;
+  }
+
+  main .section.bg-dark {
+    padding-top: 10px;
+    padding-bottom: 46px;
+  }
+
+  main .section.bg-dark .contact__info {
+    text-align: center;
+  }
+
+  .contact__details {
+    margin-top: 10px;
+    gap: 14px;
+  }
+
+  .contact__detail-row {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+  }
 }
 
 
