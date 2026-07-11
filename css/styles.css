@@ -1472,25 +1472,46 @@ main .section.bg-dark .contact__details {
 
 }
 /* ==========================================
-   Header Logo Size Adjustment
-   ========================================== */
+   Header Logo Visibility Fix
+========================================== */
 
-.nav-logo--image img,
-.nav-logo-image img {
-    height: 82px !important;
-    width: auto !important;
-    max-width: 280px !important;
-    object-fit: contain;
+.nav-logo,
+.nav-logo--image,
+.nav-logo-image {
+    display:flex;
+    align-items:center;
+    height:90px;
 }
 
 
-/* Keep mobile balanced */
-@media (max-width: 767px) {
+.nav-logo img,
+.nav-logo--image img,
+.nav-logo-image img {
+    height:90px !important;
+    width:auto !important;
+    max-width:320px !important;
+    object-fit:contain;
+    transform:scale(1.35);
+    transform-origin:center left;
+}
 
+
+/* Mobile logo */
+@media(max-width:767px){
+
+    .nav-logo,
+    .nav-logo--image,
+    .nav-logo-image {
+        height:70px;
+    }
+
+
+    .nav-logo img,
     .nav-logo--image img,
     .nav-logo-image img {
-        height: 58px !important;
-        max-width: 220px !important;
+        height:65px !important;
+        max-width:240px !important;
+        transform:scale(1.35);
     }
 
 }
