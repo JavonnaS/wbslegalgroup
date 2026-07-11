@@ -1381,3 +1381,27 @@ main .bg-dark .contact__detail-icon {
     }
 
 }
+/* FINAL CONTACT DETAILS VISIBILITY FIX */
+
+.contact__detail-row {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.contact__detail-row span {
+    color: #c79b4b !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.contact__detail-row a {
+    color: #c79b4b !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.contact__details {
+    color: #c79b4b !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
