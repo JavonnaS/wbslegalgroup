@@ -1308,37 +1308,3 @@ main .section.bg-dark .contact__info h2 {
     transform: scaleX(1.08) scaleY(0.98);
   }
 }
-/* ==========================================
-   Desktop Contact Information Visibility Fix
-   ========================================== */
-
-@media (min-width: 768px) {
-
-    .contact__detail-row,
-    .contact__detail-row span,
-    .contact__detail-row a {
-        color: #ffffff !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        display: flex !important;
-    }
-
-
-    .contact__detail-row a {
-        color: #c79b4b !important;
-    }
-
-
-    .contact__detail-icon {
-        color: #c79b4b !important;
-        opacity: 1 !important;
-    }
-
-
-    .contact__details {
-        display: flex !important;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-}
