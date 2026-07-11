@@ -1370,3 +1370,11 @@ color:#050505;
     -webkit-text-fill-color: #e0c27a !important;
   }
 }
+.nav-logo img,
+.nav-logo--image img,
+.nav-logo-image img{
+  height:58px !important;
+  width:auto !important;
+  max-width:300px !important;
+  object-fit:contain !important;
+}
