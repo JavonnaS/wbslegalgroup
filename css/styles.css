@@ -1,1033 +1,1143 @@
-/* ===================================================
-   WBS Legal Group – Main Stylesheet
-   Mobile-first responsive design
-   =================================================== */
+I’m sending it now. I’ll keep this clean and avoid adding more explanations between parts.
 
-/* ---------- CSS Custom Properties ---------- */
+Because the stylesheet is large, I’m going to send it in **3 consecutive parts**. Copy all 3 parts into the same `styles.css` file.
+
+**Part 1/3 — New `styles.css`**
+
+```css
+/* ==========================================================
+   WBS Legal Group - Luxury Boutique Law Firm Stylesheet
+   Clean responsive redesign
+   ========================================================== */
+
 :root {
-  --color-navy:       #111111;
-  --color-navy-dark:  #060606;
-  --color-gold:       #c9a84c;
-  --color-gold-light: #e0c068;
-  --color-white:      #ffffff;
-  --color-off-white:  #f6f2ea;
-  --color-light-gray: #e9ecef;
-  --color-mid-gray:   #6c757d;
-  --color-dark-text:  #212529;
+  --black: #050505;
+  --black-soft: #0d0d0d;
+  --gold: #c79b4b;
+  --gold-light: #e0c27a;
+  --white: #ffffff;
+  --cream: #f7f3eb;
+  --gray: #6d6d6d;
+  --text: #222;
 
-  --font-serif:  'Cormorant Garamond', Georgia, serif;
-  --font-sans:   'Open Sans', Arial, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Montserrat", Arial, sans-serif;
 
-  --radius:      6px;
-  --shadow-sm:   0 2px 8px rgba(0,0,0,.08);
-  --shadow-md:   0 4px 20px rgba(0,0,0,.12);
-  --transition:  .25s ease;
+  --max-width: 1200px;
+  --nav-height: 82px;
 
-  --max-width:   1200px;
-  --nav-height:  88px;
+  --radius: 18px;
+  --shadow: 0 12px 35px rgba(0,0,0,.12);
+  --transition: .3s ease;
 }
 
-/* ---------- Reset & Base ---------- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; }
+/* ================= RESET ================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
-  font-family: var(--font-sans);
-  color: var(--color-dark-text);
-  background: var(--color-white);
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--white);
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-img, svg { display: block; max-width: 100%; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 
 a {
-  color: var(--color-gold);
   text-decoration: none;
-  transition: color var(--transition);
-}
-a:hover, a:focus-visible { color: var(--color-gold-light); text-decoration: underline; }
-
-ul { list-style: none; }
-
-address { font-style: normal; }
-
-h1, h2, h3, h4 {
-  font-family: var(--font-serif);
-  line-height: 1.2;
-  color: #111;
 }
 
-/* ---------- Utility ---------- */
-.container {
+
+ul {
+  list-style: none;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  line-height: 1.15;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container,
+.section-container {
   width: 100%;
   max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: 1.25rem;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.bg-light { background: var(--color-off-white); }
-.bg-dark  { background: #0b0b0b; }
 
-.section { padding-block: 4rem; }
+/* ================= HEADER ================= */
 
-.section__heading {
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  margin-bottom: 1rem;
-}
 
-.section__heading--light { color: var(--color-white); }
-.section__heading--gold  { color: var(--color-gold-light); }
-
-.section__desc {
-  max-width: 60ch;
-  color: var(--color-mid-gray);
-  margin-bottom: 2rem;
-}
-
-.section__intro { text-align: center; }
-.section__intro .section__desc { margin-inline: auto; }
-
-.center { text-align: center; }
-
-.section__actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.25rem;
-}
-
-/* ---------- Buttons ---------- */
-.btn {
-  display: inline-block;
-  padding: .75rem 1.5rem;
-  border-radius: var(--radius);
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: .95rem;
-  cursor: pointer;
-  transition: background var(--transition), color var(--transition), border-color var(--transition);
-  border: 2px solid transparent;
-  text-align: center;
-}
-
-.btn--primary {
-  background: var(--color-gold);
-  color: #111;
-  border-color: var(--color-gold);
-}
-.btn--primary:hover, .btn--primary:focus-visible {
-  background: var(--color-gold-light);
-  border-color: var(--color-gold-light);
-  color: #111;
-  text-decoration: none;
-}
-
-.btn--outline-dark {
-  background: transparent;
-  color: #111;
-  border-color: #111;
-}
-.btn--outline-dark:hover, .btn--outline-dark:focus-visible {
-  background: #111;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* ---------- Navigation ---------- */
 .site-header {
   position: fixed;
   top: 0;
-  inset-inline: 0;
+  width: 100%;
   z-index: 1000;
-  background: #060606;
-  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  background: var(--black);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
+
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: var(--nav-height);
-  padding-inline: 1.25rem;
   max-width: var(--max-width);
-  margin-inline: auto;
+  height: var(--nav-height);
+  margin:auto;
+  padding:0 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
-.nav-logo { flex-shrink: 0; text-decoration: none; }
-.nav-logo--image img {
-  width: auto;
-  height: 64px;
-  object-fit: contain;
+
+.nav-logo img {
+  height:60px;
+  width:auto;
+  object-fit:contain;
 }
+
 
 .nav-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: .5rem;
-  border-radius: var(--radius);
-  transition: background var(--transition);
-}
-.nav-toggle:hover, .nav-toggle:focus-visible { background: rgba(255,255,255,.1); outline: none; }
-
-.hamburger-bar {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--color-white);
-  border-radius: 2px;
-  transition: transform var(--transition), opacity var(--transition);
+  background:none;
+  border:none;
+  cursor:pointer;
 }
 
-.nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(2) { opacity: 0; }
-.nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-toggle span {
+  display:block;
+  width:28px;
+  height:3px;
+  margin:5px;
+  background:white;
+}
+
+
 
 .nav-menu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  background: #0f0f0f;
-  padding: 1rem 1.25rem 1.2rem;
-  border-top: 1px solid rgba(255,255,255,.08);
-  gap: .3rem;
+  display:none;
+  position:absolute;
+  top:var(--nav-height);
+  left:0;
+  width:100%;
+  background:#080808;
+  padding:20px;
 }
-.nav-menu.is-open { display: flex; }
+
+
+.nav-menu.is-open {
+  display:flex;
+  flex-direction:column;
+}
+
 
 .nav-link {
-  display: block;
-  padding: .6rem .75rem;
-  color: #fff;
-  font-weight: 600;
-  font-size: .92rem;
-  text-transform: uppercase;
-  letter-spacing: .02em;
-  border-radius: var(--radius);
-  text-decoration: none;
+  color:white;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-size:.85rem;
+  padding:12px;
 }
-.nav-link:hover, .nav-link:focus-visible {
-  background: rgba(255,255,255,.08);
-  color: var(--color-gold);
-  text-decoration: none;
+
+
+.nav-link:hover,
+.nav-link--active {
+  color:var(--gold);
 }
+
 
 .nav-link--cta {
-  margin-top: .4rem;
-  background: transparent;
-  color: var(--color-gold-light);
-  border: 1px solid var(--color-gold);
-  text-align: center;
-}
-.nav-link--cta:hover, .nav-link--cta:focus-visible {
-  background: var(--color-gold);
-  color: #111;
+  border:1px solid var(--gold);
+  text-align:center;
+  margin-top:10px;
 }
 
-.nav-link--active { color: var(--color-gold) !important; }
 
-@media (min-width: 980px) {
-  .nav-toggle { display: none; }
+@media(min-width:980px){
 
-  .nav-menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: static;
-    background: none;
-    padding: 0;
-    border: none;
-    gap: .25rem;
-  }
-
-  .nav-link--cta {
-    margin-top: 0;
-    margin-left: .35rem;
-    padding: .5rem 1rem;
-  }
+.nav-toggle{
+ display:none;
 }
 
-/* ---------- Hero ---------- */
+.nav-menu{
+ display:flex;
+ position:static;
+ width:auto;
+ background:none;
+ padding:0;
+ flex-direction:row;
+ align-items:center;
+ gap:12px;
+}
+
+}
+
+
+
+/* ================= BUTTONS ================= */
+
+
+.btn,
+.practice-button {
+
+display:inline-block;
+padding:14px 34px;
+border-radius:999px;
+font-family:var(--sans);
+font-weight:600;
+letter-spacing:.5px;
+transition:var(--transition);
+
+}
+
+
+.btn--primary,
+.btn-primary {
+
+background:var(--gold);
+color:var(--black);
+
+}
+
+
+.btn--primary:hover,
+.btn-primary:hover {
+
+background:var(--gold-light);
+
+}
+
+
+.btn-outline {
+
+border:1px solid var(--gold);
+color:var(--gold);
+
+}
+
+
+.btn-outline:hover {
+
+background:var(--gold);
+color:var(--black);
+
+}
+
+
+
+/* ================= HERO ================= */
+
+
 .hero {
-  position: relative;
-  background: #050505;
-  padding-top: var(--nav-height);
+
+background:var(--black);
+padding-top:var(--nav-height);
+min-height:100vh;
+
 }
 
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,.35), rgba(0,0,0,.15));
-  pointer-events: none;
+
+.hero__grid,
+.hero-container {
+
+max-width:var(--max-width);
+margin:auto;
+padding:60px 25px;
+
+display:grid;
+gap:50px;
+align-items:center;
+
 }
 
-.hero__grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 1.5rem;
-  align-items: center;
-  min-height: calc(100svh - var(--nav-height));
-  padding-block: 2rem;
+
+.hero__heading,
+.hero h1 {
+
+font-size:clamp(2.8rem,6vw,5rem);
+color:white;
+
 }
 
-.hero__content { color: #fff; }
 
-.hero__heading {
-  font-size: clamp(2.2rem, 6vw, 4.7rem);
-  color: #fff;
-  margin-bottom: 1rem;
-  line-height: 1.05;
-}
-.hero__heading span {
-  color: var(--color-gold-light);
-  font-style: italic;
+.hero__heading span,
+.hero h1 span {
+
+color:var(--gold);
+font-style:italic;
+
 }
 
-.hero__sub {
-  font-size: clamp(1rem, 2.4vw, 1.2rem);
-  color: rgba(255,255,255,.9);
-  max-width: 55ch;
-  margin-bottom: 1.6rem;
+
+.hero__sub,
+.hero p {
+
+color:#ddd;
+font-size:1.1rem;
+max-width:550px;
+margin:25px 0;
+
 }
 
-.hero__image-wrap { display: flex; justify-content: center; }
-.hero__image {
-  width: 100%;
-  max-height: 70vh;
-  object-fit: cover;
-  border-radius: 4px;
+
+
+.hero__image-wrap,
+.hero-image-container {
+
+display:flex;
+justify-content:center;
+
 }
 
-@media (min-width: 980px) {
-  .hero__grid { grid-template-columns: 1fr 1.1fr; }
-  .hero__image { max-height: 82vh; }
+
+.hero__image,
+.hero-image {
+
+width:100%;
+height:auto;
+max-height:750px;
+object-fit:contain;
+border-radius:20px;
+
 }
 
-/* ---------- Values ---------- */
-.values-strip {
-  background: #080808;
-  color: #fff;
-  border-top: 1px solid #222;
-}
-.values__grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.2rem;
-}
-.values__grid--four { grid-template-columns: 1fr; }
 
-.value__card {
-  padding: 1rem;
-  border: 1px solid #222;
-  background: #0d0d0d;
-}
-.value__card h3 { color: #fff; margin-bottom: .35rem; font-size: 1.15rem; }
-.value__card p { color: #cac5bb; font-size: .95rem; }
 
-@media (min-width: 640px) {
-  .values__grid--four { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 980px) {
-  .values__grid--four { grid-template-columns: repeat(4, 1fr); }
+@media(min-width:980px){
+
+.hero__grid,
+.hero-container {
+
+grid-template-columns:1fr 1fr;
+
 }
 
-/* ---------- Practice (Homepage condensed) ---------- */
-.practice__grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
 }
-.practice__grid--condensed {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-.practice__card {
-  background: #fff;
-  border-radius: var(--radius);
-  padding: 1.2rem 1rem;
-  border: 1px solid #e8dfd2;
-  box-shadow: var(--shadow-sm);
-  text-align: center;
-}
-.practice__card h3 {
-  margin: 0;
-  font-size: 1.03rem;
-  color: #111;
+/* ================= VALUES SECTION ================= */
+
+
+.values-strip,
+.values-section {
+
+background:var(--black);
+padding:80px 25px;
+
 }
 
-/* ---------- Contact strip ---------- */
-.contact__grid { display: grid; gap: 2rem; }
-.contact__grid--simple { grid-template-columns: 1fr; }
 
-.contact__info-text {
-  color: rgba(255,255,255,.85);
-  margin-bottom: 1.2rem;
-  max-width: 60ch;
+.values-strip h2,
+.values-section h2 {
+
+text-align:center;
+font-size:clamp(2rem,4vw,3rem);
+color:white;
+margin-bottom:25px;
+
 }
 
-.contact__details { display: flex; flex-direction: column; gap: .8rem; margin-bottom: 1.2rem; }
 
-.contact__detail-row {
-  display: flex;
-  align-items: flex-start;
-  gap: .6rem;
-  color: rgba(255,255,255,.9);
-}
-.contact__detail-row a { color: var(--color-gold-light); }
-.contact__detail-row a:hover { color: #fff; }
-.contact__detail-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: .1rem; }
 
-/* ---------- Footer (simplified) ---------- */
-.site-footer {
-  background: #050505;
-  color: rgba(255,255,255,.85);
-  padding-top: 2.2rem;
+.gold-divider {
+
+width:80px;
+height:3px;
+background:var(--gold);
+margin:0 auto 40px;
+
 }
 
-.footer__grid { display: grid; gap: 1.5rem; padding-bottom: 1.6rem; }
-.footer__grid--simple { grid-template-columns: 1fr; }
 
-.footer__nav h4 {
-  color: var(--color-gold);
-  font-family: var(--font-sans);
-  font-size: .85rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin-bottom: .8rem;
+
+.values__grid,
+.values-grid {
+
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+max-width:1100px;
+margin:auto;
+
 }
 
-.footer__nav ul { display: grid; gap: .4rem; }
 
-.footer__nav a {
-  color: rgba(255,255,255,.85);
-  font-size: .93rem;
-}
-.footer__nav a:hover { color: var(--color-gold); text-decoration: none; }
 
-.footer__bottom {
-  border-top: 1px solid rgba(255,255,255,.12);
-  padding-top: 1rem;
-  font-size: .86rem;
-  color: rgba(255,255,255,.7);
-}
-.footer__bottom--simple { text-align: left; }
+.value__card,
+.value-card {
 
-@media (min-width: 768px) {
-  .footer__grid--simple {
-    grid-template-columns: 1fr auto;
-    align-items: end;
-  }
-  .footer__bottom--simple { text-align: right; border-top: none; padding-top: 0; }
+background:#0b0b0b;
+border:1px solid rgba(199,155,75,.35);
+border-radius:var(--radius);
+padding:30px;
+text-align:center;
+transition:var(--transition);
+
 }
 
-/* ---------- Focus Visible Accessibility ---------- */
-:focus-visible {
-  outline: 3px solid var(--color-gold);
-  outline-offset: 2px;
-}
-/* ===== V2 COMPACT OVERRIDES ===== */
-:root {
-  --nav-height: 78px;
-}
 
-.section--compact { padding-block: 2.4rem; }
 
-.hero--compact {
-  min-height: auto;
-  padding-top: var(--nav-height);
+.value__card:hover,
+.value-card:hover {
+
+transform:translateY(-5px);
+border-color:var(--gold);
+box-shadow:var(--shadow);
+
 }
 
-.hero__grid--tight {
-  min-height: auto;
-  padding-block: 1.6rem 1.2rem;
-  gap: 1rem;
+
+
+.value__card h3,
+.value-card h3 {
+
+font-size:2rem;
+color:white;
+margin-bottom:12px;
+
 }
 
-.hero__image--compact {
-  max-height: 52vh;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 6px;
+
+
+.value__card p,
+.value-card p {
+
+color:#cfcfcf;
+font-size:.95rem;
+
 }
 
-.values__grid--tight { gap: .7rem; }
-.values__grid--tight .value__card { padding: .8rem; }
 
-.practice__grid--condensed .practice__card {
-  padding: .85rem .7rem;
+@media(min-width:700px){
+
+.values__grid,
+.values-grid {
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
-.section__intro .section__desc {
-  margin-bottom: 1.1rem;
 }
 
-.contact__info .btn {
-  margin-top: .35rem;
+
+
+@media(min-width:1000px){
+
+.values__grid,
+.values-grid {
+
+grid-template-columns:repeat(4,1fr);
+
 }
 
-.site-footer {
-  padding-top: 1.4rem;
 }
 
-.footer__grid--simple {
-  gap: .9rem;
-  padding-bottom: 1rem;
-}
 
-.footer__nav ul { gap: .25rem; }
-.footer__bottom { padding-top: .55rem; font-size: .8rem; }
 
-@media (max-width: 767px) {
-  .navbar { min-height: var(--nav-height); }
 
-  .nav-logo--image img {
-    height: 50px;
-    max-width: 190px;
-    object-fit: contain;
-  }
 
-  .nav-menu {
-    top: var(--nav-height);
-    padding: .7rem 1rem .85rem;
-    gap: .15rem;
-  }
+/* ================= HOMEPAGE PRACTICE AREA ================= */
 
-  .nav-link {
-    padding: .48rem .6rem;
-    font-size: .88rem;
-  }
 
-  .hero__heading {
-    font-size: clamp(1.75rem, 8.1vw, 2.4rem);
-    margin-bottom: .65rem;
-  }
-
-  .hero__sub {
-    font-size: .95rem;
-    line-height: 1.5;
-    margin-bottom: .9rem;
-  }
-
-  .hero__actions .btn {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .hero__image--compact { max-height: 36vh; }
-
-  .section__heading {
-    font-size: clamp(1.45rem, 7vw, 2rem);
-    margin-bottom: .45rem;
-  }
-
-  .value__card h3, .practice__card h3 { font-size: 1rem; }
-
-  .contact__detail-row { font-size: .95rem; }
-
-  .footer__nav a { font-size: .9rem; }
-}
-/* ===== Floating Mobile CTA ===== */
-.floating-cta {
-  position: fixed;
-  right: 14px;
-  bottom: 16px;
-  z-index: 1200;
-  background: var(--color-gold);
-  color: #111;
-  font-weight: 700;
-  font-size: .9rem;
-  text-decoration: none;
-  border-radius: 999px;
-  padding: .72rem 1rem;
-  box-shadow: 0 8px 22px rgba(0,0,0,.28);
-  border: 1px solid rgba(0,0,0,.12);
-}
-
-.floating-cta:hover,
-.floating-cta:focus-visible {
-  background: var(--color-gold-light);
-  color: #111;
-  text-decoration: none;
-}
-
-@media (min-width: 980px) {
-  .floating-cta { display: none; }
-}
-/* ===== Attorneys Section ===== */
-.attorneys-section {
-  background: #ffffff;
-  padding: 70px 20px;
-}
-
-.attorneys-section h2 {
-  text-align: center;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 42px;
-  color: #050505;
-  margin-bottom: 15px;
-}
-
-.section-intro {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 50px;
-  font-family: "Open Sans", sans-serif;
-  color: #444;
-}
-
-.attorney-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.attorney-card {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
-.attorney-photo img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto 20px;
-}
-
-.attorney-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
-  margin-bottom: 5px;
-  color: #050505;
-}
-
-.attorney-card h4 {
-  color: #c79b4b;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-.attorney-card p {
-  line-height: 1.8;
-  font-size: 15px;
-  color: #333;
-  text-align: left;
-  margin-bottom: 18px;
-}
-
-@media (max-width: 900px) {
-  .attorney-grid { grid-template-columns: 1fr; }
-  .attorney-photo img { width: 190px; height: 190px; }
-  .attorneys-section h2 { font-size: 34px; }
-  .attorney-card h3 { font-size: 30px; }
-}
-/* attorney paragraph spacing */
-.attorney-bio p {
-  margin-bottom: 22px;
-}
-
-.attorney-bio p:last-child {
-  margin-bottom: 0;
-}
-/* ===== Attorney card consistency patch ===== */
-.attorney-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
-  max-width: 1100px;
-  margin: 40px auto 0;
-}
-
-.attorney-card {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-}
-
-.attorney-photo {
-  display: flex;
-  justify-content: center;
-}
-
-.attorney-photo img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 20px;
-}
-
-.attorney-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 56px;
-  line-height: 1.05;
-  margin: 0 0 8px;
-  color: #050505;
-  text-align: center;
-}
-
-.attorney-card h4 {
-  color: #c79b4b;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 16px;
-  margin: 0 0 26px;
-  text-align: center;
-}
-
-.attorney-bio p {
-  line-height: 1.8;
-  font-size: 15px;
-  color: #333;
-  text-align: left;
-  margin: 0 0 22px;
-}
-
-.attorney-bio p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 900px) {
-  .attorney-grid { grid-template-columns: 1fr; gap: 28px; }
-  .attorney-photo img { width: 190px; height: 190px; }
-  .attorney-card h3 { font-size: 34px; }
-  .attorney-card h4 { font-size: 14px; letter-spacing: 3px; }
-}
-
-/* ===== FINAL: Homepage Practice Preview (scoped, safe) ===== */
 .home-practice-section {
-  background: #050505;
-  padding: 80px 25px;
+
+background:#050505;
+padding:90px 25px;
 }
+
 
 .home-practice-container {
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
+
+max-width:1100px;
+margin:auto;
+text-align:center;
+
 }
+
 
 .home-practice-section h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
-  color: #ffffff;
-  margin-bottom: 20px;
+
+font-size:clamp(2.2rem,5vw,3.5rem);
+color:white;
+margin-bottom:20px;
+
 }
+
+
 
 .home-practice-intro {
-  max-width: 750px;
-  margin: 0 auto 55px;
-  font-family: "Open Sans", sans-serif;
-  color: #dddddd;
-  line-height: 1.8;
+
+max-width:750px;
+margin:0 auto 50px;
+color:#d6d6d6;
+line-height:1.8;
+
 }
 
-.home-practice-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 45px;
+
+
+.home-practice-grid,
+.practice-preview-grid {
+
+display:grid;
+grid-template-columns:1fr;
+gap:30px;
+
 }
 
-.home-practice-item {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid #c79b4b;
-  background: transparent;
+
+
+.home-practice-item,
+.practice-preview-card {
+
+border:1px solid rgba(199,155,75,.45);
+background:#0b0b0b;
+border-radius:var(--radius);
+padding:35px 25px;
+text-align:center;
+transition:var(--transition);
+
 }
 
-.home-practice-item h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 32px;
-  color: #ffffff;
-  margin-bottom: 15px;
+
+
+.home-practice-item:hover,
+.practice-preview-card:hover {
+
+transform:translateY(-6px);
+border-color:var(--gold);
+box-shadow:var(--shadow);
+
 }
 
-.home-practice-item p {
-  font-family: "Open Sans", sans-serif;
-  color: #cccccc;
-  line-height: 1.8;
-  font-size: 15px;
+
+
+.home-practice-item h3,
+.practice-preview-card h3 {
+
+color:white;
+font-size:2rem;
+margin-bottom:15px;
+
 }
 
-/* scoped button so it only affects homepage preview */
-.home-practice-section .practice-button {
-  display: inline-block;
-  margin-top: 45px;
-  padding: 14px 35px;
-  border: 1px solid #c79b4b;
-  color: #c79b4b;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px;
-  transition: .3s ease;
-  border-radius: 0;
+
+
+.home-practice-item p,
+.practice-preview-card p {
+
+color:#cfcfcf;
+line-height:1.7;
+
 }
 
-.home-practice-section .practice-button:hover {
-  background: #c79b4b;
-  color: #050505;
+
+
+@media(min-width:900px){
+
+.home-practice-grid,
+.practice-preview-grid {
+
+grid-template-columns:repeat(3,1fr);
+
 }
 
-@media (max-width: 900px) {
-  .home-practice-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-/* Safety reset: keep global practice buttons untouched elsewhere */
-.home-practice-section .practice-button {
-  border-radius: 999px;
 }
 
-/* ===== Practice Areas Page (final) ===== */
+
+
+
+/* ================= PRACTICE PAGE ================= */
+
+
 .practice-page {
-  background: #ffffff;
-  padding: 90px 25px;
+
+background:var(--cream);
+padding:110px 25px 80px;
+
 }
+
+
 
 .practice-container {
-  max-width: 1000px;
-  margin: auto;
+
+max-width:1100px;
+margin:auto;
+
 }
+
+
 
 .practice-page h1 {
-  text-align: center;
-  font-family: var(--font-serif);
-  font-size: 56px;
-  font-weight: 600;
-  color: #050505;
-  margin-bottom: 25px;
+
+text-align:center;
+font-size:clamp(3rem,6vw,4rem);
+margin-bottom:20px;
+color:var(--black);
+
 }
+
+
 
 .practice-intro {
-  max-width: 750px;
-  margin: 0 auto 80px;
-  text-align: center;
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.9;
-  color: #444;
+
+max-width:800px;
+margin:0 auto 70px;
+text-align:center;
+color:#555;
+font-size:1.05rem;
+
 }
+
+
 
 .practice-area {
-  padding: 55px 0;
-  border-bottom: 1px solid #d8c39a;
+
+background:white;
+border:1px solid rgba(199,155,75,.45);
+border-radius:25px;
+padding:45px;
+margin-bottom:35px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+position:relative;
+overflow:hidden;
+
 }
 
-.practice-area:last-child {
-  border-bottom: none;
+
+
+.practice-area::before {
+
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:6px;
+height:100%;
+background:var(--gold);
+
 }
+
+
 
 .practice-area h2 {
-  font-family: var(--font-serif);
-  font-size: 42px;
-  font-weight: 600;
-  color: #050505;
-  margin-bottom: 15px;
+
+font-size:2.5rem;
+margin-bottom:15px;
+
 }
 
-.gold-line {
-  width: 70px;
-  height: 3px;
-  background: #c79b4b;
-  margin-bottom: 25px;
+
+
+.practice-area .gold-line {
+
+width:65px;
+height:3px;
+background:var(--gold);
+margin-bottom:25px;
+
 }
+
+
 
 .practice-area p {
-  font-family: var(--font-sans);
-  color: #333;
-  font-size: 16px;
-  line-height: 1.9;
-  max-width: 850px;
+
+color:#444;
+line-height:1.8;
+
 }
+
+
 
 .practice-area h3 {
-  margin-top: 35px;
-  font-family: var(--font-sans);
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #c79b4b;
+
+font-family:var(--sans);
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:.85rem;
+color:var(--gold);
+margin:30px 0 15px;
+
 }
+
+
 
 .practice-area ul {
-  columns: 2;
-  padding-left: 20px;
-  font-family: var(--font-sans);
-  color: #333;
-  line-height: 2;
+
+display:grid;
+grid-template-columns:1fr;
+gap:8px;
+padding-left:20px;
+
 }
+
+
 
 .practice-area li {
-  margin-bottom: 5px;
+
+position:relative;
+color:#333;
+
 }
 
-/* Logo safety override (keeps giant logo bug from returning) */
+
+
+.practice-area li::before {
+
+content:"✦";
+color:var(--gold);
+position:absolute;
+left:-20px;
+
+}
+
+
+@media(min-width:700px){
+
+.practice-area ul {
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+/* ================= CONTACT SECTION ================= */
+
+
+.contact,
+.contact-section {
+
+background:var(--black);
+padding:90px 25px;
+text-align:center;
+
+}
+
+
+
+.contact h2,
+.contact-section h2 {
+
+color:white;
+font-size:3rem;
+margin-bottom:20px;
+
+}
+
+
+
+.contact p,
+.contact-info {
+
+color:#ddd;
+max-width:650px;
+margin:0 auto 30px;
+
+}
+
+
+
+.contact__details {
+
+display:flex;
+flex-direction:column;
+gap:15px;
+margin:30px auto;
+
+}
+
+
+
+.contact__detail-row {
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+color:#ddd;
+
+}
+
+
+
+.contact__detail-row a {
+
+color:var(--gold);
+
+}
+
+
+
+.contact .btn {
+
+margin-top:20px;
+
+}
+
+
+
+
+/* ================= FLOATING CTA ================= */
+
+
+.floating-cta {
+
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:1200;
+
+background:var(--gold);
+color:var(--black);
+
+padding:13px 25px;
+border-radius:999px;
+
+font-weight:700;
+box-shadow:var(--shadow);
+
+}
+
+
+
+.floating-cta:hover {
+
+background:var(--gold-light);
+color:black;
+
+}
+
+
+@media(min-width:980px){
+
+.floating-cta{
+
+display:none;
+
+}
+
+}
+
+
+
+
+/* ================= ATTORNEY SECTION ================= */
+
+
+.attorneys-section {
+
+background:white;
+padding:90px 25px;
+
+}
+
+
+
+.attorneys-section h2 {
+
+text-align:center;
+font-size:3rem;
+margin-bottom:20px;
+
+}
+
+
+
+.section-intro {
+
+text-align:center;
+max-width:750px;
+margin:0 auto 50px;
+color:#555;
+
+}
+
+
+
+.attorney-grid {
+
+max-width:1100px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr;
+gap:50px;
+
+}
+
+
+
+.attorney-card {
+
+text-align:center;
+
+}
+
+
+
+.attorney-photo img {
+
+width:220px;
+height:220px;
+object-fit:cover;
+object-position:center top;
+border-radius:50%;
+margin:auto auto 25px;
+
+}
+
+
+
+.attorney-card h3 {
+
+font-size:3rem;
+
+}
+
+
+
+.attorney-card h4 {
+
+color:var(--gold);
+font-family:var(--sans);
+font-size:.85rem;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:25px;
+
+}
+
+
+
+.attorney-bio {
+
+text-align:left;
+
+}
+
+
+
+.attorney-bio p {
+
+margin-bottom:20px;
+color:#444;
+
+}
+
+
+
+@media(min-width:900px){
+
+.attorney-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+.site-footer {
+
+background:#030303;
+color:white;
+padding:50px 25px;
+
+}
+
+
+
+.footer-container,
+.footer__grid {
+
+max-width:var(--max-width);
+margin:auto;
+
+}
+
+
+
+.footer__nav h4 {
+
+color:var(--gold);
+font-family:var(--sans);
+font-size:.85rem;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:15px;
+
+}
+
+
+
+.footer__nav a {
+
+color:#ccc;
+display:block;
+margin-bottom:8px;
+
+}
+
+
+
+.footer__nav a:hover {
+
+color:var(--gold);
+
+}
+
+
+
+.footer__bottom {
+
+border-top:1px solid rgba(255,255,255,.15);
+margin-top:30px;
+padding-top:20px;
+color:#aaa;
+font-size:.85rem;
+
+}
+
+
+
+
+/* ================= MOBILE ADJUSTMENTS ================= */
+
+
+@media(max-width:767px){
+
+
+.navbar {
+
+height:75px;
+
+}
+
+
+
 .nav-logo img {
-  height: 64px;
-  width: auto;
-  max-width: 190px;
-  object-fit: contain;
+
+height:45px;
+
 }
 
-@media (max-width: 768px) {
-  .practice-page h1 { font-size: 44px; }
-  .practice-area h2 { font-size: 34px; }
-  .practice-area ul { columns: 1; }
 
-  .nav-logo img {
-    height: 50px;
-    max-width: 190px;
-  }
+
+.hero-container,
+.hero__grid {
+
+padding-top:40px;
+padding-bottom:40px;
+
 }
-/* ===== EXACT MOBILE MATCH TUNING ===== */
-@media (max-width: 767px) {
-  /* keep CTA above Safari bottom bar */
-  .floating-cta {
-    bottom: 84px;
-    right: 12px;
-    padding: .72rem 1.05rem;
-    font-size: .9rem;
-    z-index: 1300;
-  }
 
-  /* Header / logo / hamburger */
-  .site-header {
-    box-shadow: none;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-  }
 
-  .navbar {
-    min-height: 74px;
-    padding-inline: .9rem;
-  }
 
-  .nav-logo img {
-    height: 42px;
-    max-width: 170px;
-    width: auto;
-    object-fit: contain;
-  }
+.hero h1,
+.hero__heading {
 
-  .nav-toggle {
-    padding: .35rem;
-  }
+font-size:2.3rem;
 
-  .hamburger-bar {
-    width: 26px;
-    height: 3px;
-  }
+}
 
-  /* Hero tighter so values start sooner */
-  .hero__grid--tight {
-    padding-block: .9rem .7rem;
-    gap: .7rem;
-  }
 
-  .hero__image--compact {
-    max-height: 28vh;
-    border-radius: 2px;
-  }
 
-  .hero__heading {
-    font-size: clamp(1.5rem, 7vw, 2rem);
-    margin-bottom: .45rem;
-  }
+.hero-image,
+.hero__image {
 
-  .hero__sub {
-    font-size: .92rem;
-    margin-bottom: .7rem;
-  }
+max-height:none;
+height:auto;
 
-  /* Values section like screenshot cards */
-  .values-strip.section--compact {
-    padding-block: 1rem 1.1rem;
-    background: #000;
-  }
+}
 
-  .values__grid--tight {
-    gap: .8rem;
-    margin-top: .2rem;
-  }
 
-  .values__grid--tight .value__card {
-    padding: 1rem .95rem;
-    border: 1px solid #1c1c1c;
-    background: #060606;
-  }
 
-  .values__grid--tight .value__card h3 {
-    font-size: 2.05rem;
-    line-height: 1.05;
-    margin-bottom: .42rem;
-    color: #f3f3f3;
-  }
+.values-strip,
+.values-section {
 
-  .values__grid--tight .value__card p {
-    font-size: 1.05rem;
-    line-height: 1.5;
-    color: #bfbfbf;
-  }
+padding:55px 20px;
 
-  /* Practice section spacing/scale */
-  .home-practice-section {
-    background: #000;
-    padding: 2rem 1rem 1.8rem;
-  }
+}
 
-  .home-practice-container {
-    max-width: 100%;
-  }
 
-  .home-practice-section h2 {
-    font-size: clamp(2.7rem, 16vw, 4.2rem);
-    line-height: 1;
-    margin-bottom: .9rem;
-  }
 
-  .home-practice-intro {
-    max-width: 100%;
-    margin: 0 auto 1rem;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #d8d8d8;
-  }
+.value__card h3,
+.value-card h3 {
 
-  .home-practice-grid {
-    grid-template-columns: 1fr;
-    gap: .8rem;
-  }
+font-size:1.7rem;
 
-  .home-practice-item {
-    padding: .9rem .8rem;
-    border-top: 1px solid #2b2b2b;
-  }
+}
 
-  .home-practice-item h3 {
-    font-size: 1.35rem;
-    margin-bottom: .38rem;
-  }
 
-  .home-practice-item p {
-    font-size: .97rem;
-    line-height: 1.55;
-  }
 
-  .home-practice-section .practice-button {
-    margin-top: .9rem;
-    padding: .72rem 1.1rem;
-    border-radius: 999px;
-  }
+.home-practice-section {
+
+padding:60px 20px;
+
+}
+
+
+
+.practice-area {
+
+padding:30px 25px;
+
+}
+
+
+
+.practice-area h2 {
+
+font-size:2rem;
+
+}
+
+
+
+.practice-page {
+
+padding-top:95px;
+
+}
+
+
+
+.practice-page h1 {
+
+font-size:2.8rem;
+
+}
+
+
 }
