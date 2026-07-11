@@ -1397,3 +1397,18 @@ main .bg-dark .section__heading--light {
     }
 
 }
+/* Reduce spacing between Contact Us heading and contact information */
+
+main .bg-light {
+    padding-bottom: 20px;
+}
+
+
+main .bg-light .section__heading {
+    margin-bottom: 0;
+}
+
+
+main .bg-dark {
+    padding-top: 35px;
+}
