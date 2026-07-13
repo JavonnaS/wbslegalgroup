@@ -79,9 +79,11 @@
 
       validate('name', 'nameError', 'Full name is required.');
       validateEmail('email', 'emailError');
-      validate('subject', 'subjectError', 'Please select a practice area.');
+      validate('subject', 'subjectError', 'Please select a preferred contact method.');
       validate('message', 'messageError', 'Please describe your legal matter.');
-
+      validate('phone', 'phoneError', 'Phone number is required.');
+      validate('consultMethod', 'consultMethodError', 'Please select a consultation method.');
+       
       if (!valid) {
   e.preventDefault();
 }
