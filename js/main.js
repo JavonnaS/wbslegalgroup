@@ -46,8 +46,7 @@
 
   if (form) {
     form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var valid = true;
+  var valid = true;
 
       function validate(id, errorId, msg) {
         var field = document.getElementById(id);
@@ -83,15 +82,9 @@
       validate('subject', 'subjectError', 'Please select a practice area.');
       validate('message', 'messageError', 'Please describe your legal matter.');
 
-      if (valid) {
-        var successEl = document.getElementById('formSuccess');
-        form.reset();
-        if (successEl) {
-          successEl.hidden = false;
-          successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          setTimeout(function () { successEl.hidden = true; }, 6000);
-        }
-      }
+      if (!valid) {
+  e.preventDefault();
+}
     });
 
     // Clear inline error on input
